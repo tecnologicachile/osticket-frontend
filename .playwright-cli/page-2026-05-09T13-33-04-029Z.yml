@@ -1,0 +1,20 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]: os
+    - heading "osTicket" [level=1] [ref=e7]
+    - paragraph [ref=e8]: Portal de administración
+  - generic [ref=e9]:
+    - generic [ref=e10]:
+      - generic [ref=e11]:
+        - generic [ref=e12]: Usuario
+        - generic [ref=e13]:
+          - img [ref=e14]
+          - textbox "Usuario" [active] [ref=e17]:
+            - /placeholder: Usuario o email
+      - generic [ref=e18]:
+        - generic [ref=e19]: Contraseña
+        - generic [ref=e20]:
+          - img [ref=e21]
+          - textbox "Contraseña" [ref=e24]
+    - button "Iniciar sesión" [ref=e25]
+  - paragraph [ref=e26]: Ingresa con tus credenciales de osTicket

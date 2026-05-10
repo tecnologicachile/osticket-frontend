@@ -1,0 +1,172 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: os
+      - generic [ref=e7]: osTicket
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - link "Tickets" [ref=e10] [cursor=pointer]:
+          - /url: /tickets
+          - img [ref=e11]
+          - generic [ref=e14]: Tickets
+        - link "Estadísticas" [ref=e15] [cursor=pointer]:
+          - /url: /stats
+          - img [ref=e16]
+          - generic [ref=e18]: Estadísticas
+        - link "Temas" [ref=e19] [cursor=pointer]:
+          - /url: /topics
+          - img [ref=e20]
+          - generic [ref=e25]: Temas
+      - button "Bandejas" [ref=e27]:
+        - img [ref=e28]
+        - text: Bandejas
+      - link "Búsqueda avanzada" [ref=e30] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e31]
+        - generic [ref=e34]: Búsqueda avanzada
+    - generic [ref=e36]:
+      - generic [ref=e38]: osTicket Portal
+      - generic [ref=e39]: v1.0
+  - generic [ref=e40]:
+    - banner [ref=e41]:
+      - heading "osTicket" [level=1] [ref=e43]
+      - generic [ref=e44]:
+        - button "Buscar tickets... ⌘K" [ref=e45]:
+          - img [ref=e46]
+          - generic [ref=e49]: Buscar tickets...
+          - generic [ref=e50]: ⌘K
+        - button "Activar modo oscuro" [ref=e51]:
+          - img [ref=e52]
+        - generic [ref=e54]:
+          - generic [ref=e56]: G
+          - generic [ref=e58]: Gustavo Quiero
+        - button "Cerrar sesión" [ref=e59]:
+          - img [ref=e60]
+    - main [ref=e63]:
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - link "Volver a tickets" [ref=e82] [cursor=pointer]:
+            - /url: /tickets
+            - img [ref=e83]
+            - text: Volver a tickets
+          - generic [ref=e85]:
+            - 'heading "RE: [COMCER] Producto agotado" [level=1] [ref=e86]'
+            - generic [ref=e87]:
+              - generic [ref=e88]: Abierto
+              - generic [ref=e90]:
+                - img [ref=e91]
+                - text: Normal
+          - generic [ref=e92]:
+            - generic [ref=e93]: "#988451"
+            - generic [ref=e94]: — Web Comcer
+            - generic [ref=e95]:
+              - generic [ref=e96]: "|"
+              - text: Soporte
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - img [ref=e102]
+                - generic [ref=e104]: Web Comcer
+                - generic [ref=e105]: 30 abr 2026, 01:17 p. m.
+              - generic [ref=e106]: "Cargado -----Mensaje original----- De: COMCER Artículos de Limpieza y Aseo <alerta> Enviado el: jueves, 30 de abril de 2026 2:16 Para: pedidos <pedidos> Asunto: [COMCER] Producto agotado Toalla de papel Indaial Fit para toallero de palanca - 6 rollos de 200 metros (333136) está agotado.</pedidos></alerta>"
+            - generic [ref=e107]:
+              - generic [ref=e108]:
+                - button "Negrita" [ref=e109]:
+                  - img [ref=e110]
+                - button "Cursiva" [ref=e112]:
+                  - img [ref=e113]
+                - button "Lista" [ref=e115]:
+                  - img [ref=e116]
+                - button "Enlace" [ref=e117]:
+                  - img [ref=e118]
+                - generic [ref=e121]: HTML
+              - generic [ref=e122]:
+                - heading "Enviar respuesta" [level=3] [ref=e123]:
+                  - img [ref=e124]
+                  - text: Enviar respuesta
+                - textbox "Escribe tu respuesta aquí… (soporta HTML)" [ref=e127]
+                - generic [ref=e128]:
+                  - generic [ref=e129]:
+                    - generic [ref=e130]: "Estado tras respuesta:"
+                    - combobox "Estado tras respuesta:" [ref=e131]:
+                      - option "Sin cambio" [selected]
+                      - option "Abierto"
+                      - option "Resuelto"
+                  - button "Enviar respuesta" [disabled] [ref=e132]:
+                    - img [ref=e133]
+                    - text: Enviar respuesta
+            - generic [ref=e136]:
+              - heading "Agregar nota interna" [level=3] [ref=e137]:
+                - img [ref=e138]
+                - text: Agregar nota interna
+              - textbox "Título de la nota (opcional)" [ref=e141]
+              - textbox "Escribe una nota interna…" [ref=e142]
+              - button "Agregar nota" [disabled] [ref=e144]:
+                - img [ref=e145]
+                - text: Agregar nota
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - heading "Información" [level=4] [ref=e151]:
+                - img [ref=e152]
+                - text: Información
+              - generic [ref=e155]:
+                - generic [ref=e156]:
+                  - term [ref=e157]: ID
+                  - definition [ref=e158]: "#988451"
+                - generic [ref=e159]:
+                  - term [ref=e160]: Fuente
+                  - definition [ref=e161]: Email
+                - generic [ref=e162]:
+                  - term [ref=e163]: Creado
+                  - definition [ref=e164]: 30 abr 2026, 01:17 p. m.
+                - generic [ref=e165]:
+                  - term [ref=e166]: Actualizado
+                  - definition [ref=e167]: 4 may 2026, 01:18 p. m.
+            - generic [ref=e168]:
+              - heading "Asignar" [level=4] [ref=e169]:
+                - img [ref=e170]
+                - text: Asignar
+              - generic [ref=e173]:
+                - combobox [ref=e174]:
+                  - option "Seleccionar agente…" [selected]
+                  - option "Felipe Melo"
+                  - option "Gustavo Quiero"
+                  - option "Mariano Melo"
+                - button "Asignar" [disabled] [ref=e175]
+            - generic [ref=e176]:
+              - heading "Cambiar estado" [level=4] [ref=e177]:
+                - img [ref=e178]
+                - text: Cambiar estado
+              - paragraph [ref=e180]: "Actual: Abierto"
+              - generic [ref=e181]:
+                - combobox [ref=e182]:
+                  - option "Seleccionar…" [selected]
+                  - option "Abierto"
+                  - option "Resuelto"
+                  - option "Cerrado"
+                - button "Cambiar" [disabled] [ref=e183]
+            - generic [ref=e184]:
+              - heading "Transferir" [level=4] [ref=e185]:
+                - img [ref=e186]
+                - text: Transferir
+              - generic [ref=e189]:
+                - combobox [ref=e190]:
+                  - option "Seleccionar depto…" [selected]
+                  - option "Contacto"
+                  - option "Gustavo"
+                  - option "Mantenimiento"
+                  - option "Soporte"
+                  - option "Ventas"
+                - button "Mover" [disabled] [ref=e191]
+            - generic [ref=e192]:
+              - heading "Asignarme" [level=4] [ref=e193]:
+                - img [ref=e194]
+                - text: Asignarme
+              - button "Asignarme este ticket" [ref=e198]
+            - generic [ref=e199]:
+              - heading "Fusionar tickets" [level=4] [ref=e200]:
+                - img [ref=e201]
+                - text: Fusionar tickets
+              - 'textbox "IDs separados por coma (ej: 42, 57)" [ref=e205]'
+              - button "Fusionar en este ticket" [disabled] [ref=e206]

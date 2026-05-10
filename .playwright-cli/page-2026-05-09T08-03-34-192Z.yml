@@ -1,0 +1,174 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: os
+      - generic [ref=e7]: osTicket
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - link "Tickets" [ref=e10] [cursor=pointer]:
+          - /url: /tickets
+          - img [ref=e11]
+          - generic [ref=e14]: Tickets
+        - link "Estadísticas" [ref=e15] [cursor=pointer]:
+          - /url: /stats
+          - img [ref=e16]
+          - generic [ref=e18]: Estadísticas
+      - button "Bandejas" [ref=e20]:
+        - img [ref=e21]
+        - text: Bandejas
+      - link "Búsqueda avanzada" [ref=e23] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e24]
+        - generic [ref=e27]: Búsqueda avanzada
+    - generic [ref=e29]:
+      - generic [ref=e31]: osTicket Portal
+      - generic [ref=e32]: v1.0
+  - generic [ref=e33]:
+    - banner [ref=e34]:
+      - heading "osTicket" [level=1] [ref=e36]
+      - generic [ref=e37]:
+        - generic [ref=e39]:
+          - img [ref=e40]
+          - textbox "Buscar tickets…" [ref=e43]
+        - button "Activar modo oscuro" [ref=e44]:
+          - img [ref=e45]
+        - generic [ref=e47]:
+          - generic [ref=e49]: M
+          - generic [ref=e51]: Agente
+        - button "Cerrar sesión" [ref=e52]:
+          - img [ref=e53]
+    - main [ref=e56]:
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - link "Volver a tickets" [ref=e75] [cursor=pointer]:
+            - /url: /tickets
+            - img [ref=e76]
+            - text: Volver a tickets
+          - generic [ref=e78]:
+            - heading "Problema con impresora fiscal - TEST FRONTEND" [level=1] [ref=e79]
+            - generic [ref=e80]:
+              - generic [ref=e81]: Abrir
+              - generic [ref=e83]: P[object Object]
+          - generic [ref=e84]:
+            - generic [ref=e85]: "#988768"
+            - generic [ref=e86]: — Gustavo Quiero
+            - generic [ref=e87]:
+              - generic [ref=e88]: "|"
+              - text: Soporte
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - generic [ref=e92]:
+                - generic [ref=e93]:
+                  - img [ref=e94]
+                  - generic [ref=e96]: Gustavo Quiero
+                  - generic [ref=e97]: 9 may 2026, 07:59 a. m.
+                - generic [ref=e98]:
+                  - paragraph [ref=e203]: Hola equipo de soporte,
+                  - paragraph [ref=e204]: La impresora fiscal del punto de venta 3 no está imprimiendo correctamente. Los comprobantes salen con la fecha equivocada (aparece enero 2020).
+                  - paragraph [ref=e205]: ¿Podrían revisarlo urgente? Tenemos clientes esperando.
+                  - paragraph [ref=e206]:
+                    - text: Gracias,
+                    - text: Gustavo Quiero
+              - generic [ref=e207]:
+                - generic [ref=e208]:
+                  - img [ref=e209]
+                  - generic [ref=e212]: Mariano Melo
+                  - generic [ref=e213]: 9 may 2026, 08:03 a. m.
+                - generic [ref=e214]: Hola Gustavo, Gracias por reportar. Ya revisamos la impresora fiscal del punto 3. El problema era la bateria del reloj interno que se agoto, por eso mostraba fecha de 2020. Ya la reemplazamos y esta funcionando correctamente. Por favor hace una prueba cuando puedas. Saludos, Equipo de Soporte
+            - generic [ref=e103]:
+              - generic [ref=e104]:
+                - button "Negrita" [ref=e105]:
+                  - img [ref=e106]
+                - button "Cursiva" [ref=e108]:
+                  - img [ref=e109]
+                - button "Lista" [ref=e111]:
+                  - img [ref=e112]
+                - button "Enlace" [ref=e113]:
+                  - img [ref=e114]
+                - generic [ref=e117]: HTML
+              - generic [ref=e118]:
+                - heading "Enviar respuesta" [level=3] [ref=e119]:
+                  - img [ref=e120]
+                  - text: Enviar respuesta
+                - textbox "Escribe tu respuesta aquí… (soporta HTML)" [ref=e123]
+                - generic [ref=e124]:
+                  - generic [ref=e125]:
+                    - generic [ref=e126]: "Estado tras respuesta:"
+                    - combobox "Estado tras respuesta:" [ref=e127]:
+                      - option "Sin cambio" [selected]
+                      - option "Abierto"
+                      - option "Resuelto"
+                  - button "Enviar respuesta" [disabled] [ref=e128]:
+                    - img [ref=e215]
+                    - text: Enviar respuesta
+            - generic [ref=e132]:
+              - heading "Agregar nota interna" [level=3] [ref=e133]:
+                - img [ref=e134]
+                - text: Agregar nota interna
+              - textbox "Título de la nota (opcional)" [ref=e137]
+              - textbox "Escribe una nota interna…" [ref=e138]
+              - button "Agregar nota" [disabled] [ref=e140]:
+                - img [ref=e141]
+                - text: Agregar nota
+          - generic [ref=e145]:
+            - generic [ref=e146]:
+              - heading "Información" [level=4] [ref=e147]:
+                - img [ref=e148]
+                - text: Información
+              - generic [ref=e151]:
+                - generic [ref=e152]:
+                  - term [ref=e153]: ID
+                  - definition [ref=e154]: "#988768"
+                - generic [ref=e155]:
+                  - term [ref=e156]: Fuente
+                  - definition [ref=e157]: Email
+                - generic [ref=e158]:
+                  - term [ref=e159]: Creado
+                  - definition [ref=e160]: 9 may 2026, 07:59 a. m.
+                - generic [ref=e161]:
+                  - term [ref=e162]: Actualizado
+                  - definition [ref=e163]: 9 may 2026, 08:03 a. m.
+            - generic [ref=e164]:
+              - heading "Asignar" [level=4] [ref=e165]:
+                - img [ref=e166]
+                - text: Asignar
+              - paragraph [ref=e218]: "Actual: Mariano Melo"
+              - generic [ref=e169]:
+                - combobox [ref=e170]:
+                  - option "Seleccionar agente…" [selected]
+                  - option "Felipe Melo"
+                  - option "Gustavo Quiero"
+                  - option "Mariano Melo"
+                - button "Asignar" [disabled] [ref=e171]
+            - generic [ref=e172]:
+              - heading "Cambiar estado" [level=4] [ref=e173]:
+                - img [ref=e174]
+                - text: Cambiar estado
+              - paragraph [ref=e176]: "Actual: Abrir"
+              - generic [ref=e177]:
+                - combobox [ref=e178]:
+                  - option "Seleccionar…" [selected]
+                  - option "Abierto"
+                  - option "Resuelto"
+                  - option "Cerrado"
+                - button "Cambiar" [disabled] [ref=e179]
+            - generic [ref=e180]:
+              - heading "Transferir" [level=4] [ref=e181]:
+                - img [ref=e182]
+                - text: Transferir
+              - generic [ref=e185]:
+                - combobox [ref=e186]:
+                  - option "Seleccionar depto…" [selected]
+                  - option "Contacto"
+                  - option "Gustavo"
+                  - option "Mantenimiento"
+                  - option "Soporte"
+                  - option "Ventas"
+                - button "Mover" [disabled] [ref=e187]
+            - generic [ref=e195]:
+              - heading "Fusionar tickets" [level=4] [ref=e196]:
+                - img [ref=e197]
+                - text: Fusionar tickets
+              - 'textbox "IDs separados por coma (ej: 42, 57)" [ref=e201]'
+              - button "Fusionar en este ticket" [disabled] [ref=e202]

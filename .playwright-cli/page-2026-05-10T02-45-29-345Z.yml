@@ -1,0 +1,49 @@
+- generic [ref=e27]:
+  - complementary [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]: os
+      - generic [ref=e31]: osTicket
+    - navigation [ref=e32]:
+      - generic [ref=e33]:
+        - link "Tickets" [ref=e34] [cursor=pointer]:
+          - /url: /tickets
+          - img [ref=e35]
+          - generic [ref=e38]: Tickets
+        - link "Estadísticas" [ref=e39] [cursor=pointer]:
+          - /url: /stats
+          - img [ref=e40]
+          - generic [ref=e42]: Estadísticas
+        - link "Temas" [ref=e43] [cursor=pointer]:
+          - /url: /topics
+          - img [ref=e44]
+          - generic [ref=e49]: Temas
+      - button "Bandejas" [ref=e51]:
+        - img [ref=e52]
+        - text: Bandejas
+      - link "Búsqueda avanzada" [ref=e54] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e55]
+        - generic [ref=e58]: Búsqueda avanzada
+    - generic [ref=e60]:
+      - generic [ref=e62]: osTicket Portal
+      - generic [ref=e63]: v1.0
+  - generic [ref=e64]:
+    - banner [ref=e65]:
+      - heading "Tickets" [level=1] [ref=e67]
+      - generic [ref=e68]:
+        - button "Buscar tickets... ⌘K" [ref=e69]:
+          - img [ref=e70]
+          - generic [ref=e73]: Buscar tickets...
+          - generic [ref=e74]: ⌘K
+        - button "Activar modo oscuro" [ref=e75]:
+          - img [ref=e76]
+        - generic [ref=e78]:
+          - generic [ref=e80]: G
+          - generic [ref=e82]: Gustavo Quiero
+        - button "Cerrar sesión" [ref=e83]:
+          - img [ref=e84]
+    - main [ref=e87]:
+      - generic [ref=e88]:
+        - img [ref=e306]
+        - heading "Error al cargar tickets" [level=3] [ref=e308]
+        - paragraph [ref=e309]: "Failed to execute 'json' on 'Response': Unexpected end of JSON input"

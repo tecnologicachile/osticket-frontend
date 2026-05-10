@@ -1,0 +1,12 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]: os
+    - heading "osTicket" [level=1] [ref=e7]
+    - paragraph [ref=e8]: Portal de administración
+  - generic [ref=e9]:
+    - generic [ref=e10]: API Key
+    - generic [ref=e11]:
+      - img [ref=e12]
+      - textbox "Ingresa tu API key" [ref=e16]: mcp-osticket-rest-2026
+    - button "Conectar" [ref=e17]
+  - paragraph [ref=e18]: Conéctate usando tu API key de osTicket REST API

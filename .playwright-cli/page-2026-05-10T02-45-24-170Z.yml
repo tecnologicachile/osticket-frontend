@@ -1,0 +1,210 @@
+- generic [ref=e27]:
+  - complementary [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]: os
+      - generic [ref=e31]: osTicket
+    - navigation [ref=e32]:
+      - generic [ref=e33]:
+        - link "Tickets" [ref=e34] [cursor=pointer]:
+          - /url: /tickets
+          - img [ref=e35]
+          - generic [ref=e38]: Tickets
+        - link "Estadísticas" [ref=e39] [cursor=pointer]:
+          - /url: /stats
+          - img [ref=e40]
+          - generic [ref=e42]: Estadísticas
+        - link "Temas" [ref=e43] [cursor=pointer]:
+          - /url: /topics
+          - img [ref=e44]
+          - generic [ref=e49]: Temas
+      - button "Bandejas" [ref=e51]:
+        - img [ref=e52]
+        - text: Bandejas
+      - link "Búsqueda avanzada" [ref=e54] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e55]
+        - generic [ref=e58]: Búsqueda avanzada
+    - generic [ref=e60]:
+      - generic [ref=e62]: osTicket Portal
+      - generic [ref=e63]: v1.0
+  - generic [ref=e64]:
+    - banner [ref=e65]:
+      - heading "Tickets" [level=1] [ref=e67]
+      - generic [ref=e68]:
+        - button "Buscar tickets... ⌘K" [ref=e69]:
+          - img [ref=e70]
+          - generic [ref=e73]: Buscar tickets...
+          - generic [ref=e74]: ⌘K
+        - button "Activar modo oscuro" [ref=e75]:
+          - img [ref=e76]
+        - generic [ref=e78]:
+          - generic [ref=e80]: G
+          - generic [ref=e82]: Gustavo Quiero
+        - button "Cerrar sesión" [ref=e83]:
+          - img [ref=e84]
+    - main [ref=e87]:
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - img [ref=e91]
+            - generic [ref=e93]: Filtros
+          - generic [ref=e94]:
+            - generic [ref=e95]:
+              - generic [ref=e96]: Estado
+              - combobox [ref=e97]:
+                - option "Todos" [selected]
+                - option "Abierto"
+                - option "Resuelto"
+                - option "Cerrado"
+            - generic [ref=e98]:
+              - generic [ref=e99]: Departamento
+              - combobox [ref=e100]:
+                - option "Todos" [selected]
+                - option "Contacto"
+                - option "Gustavo"
+                - option "Mantenimiento"
+                - option "Soporte"
+                - option "Ventas"
+            - generic [ref=e101]:
+              - generic [ref=e102]: Agente
+              - combobox [ref=e103]:
+                - option "Todos" [selected]
+                - option "Felipe Melo"
+                - option "Gustavo Quiero"
+                - option "Mariano Melo"
+            - generic [ref=e104]:
+              - generic [ref=e105]: Prioridad
+              - combobox [ref=e106]:
+                - option "Todas" [selected]
+                - option "Baja"
+                - option "Normal"
+                - option "Alta"
+                - option "Emergencia"
+            - generic [ref=e107]:
+              - generic [ref=e108]: Tema
+              - combobox [ref=e109]:
+                - option "Todos" [selected]
+                - option "Comentarios"
+                - option "Consulta general"
+                - option "ERPSync"
+                - option "Errores"
+                - option "Informar de un problema"
+                - option "Instalación"
+                - option "Problema de acceso"
+                - option "Soporte/Config"
+            - generic [ref=e110]:
+              - generic [ref=e111]: Desde
+              - textbox [ref=e112]
+            - generic [ref=e113]:
+              - generic [ref=e114]: Hasta
+              - textbox [ref=e115]
+            - generic [ref=e116]:
+              - generic [ref=e117]:
+                - generic [ref=e118]: Cola
+                - combobox [ref=e119]:
+                  - option "Abiertos" [selected]
+                  - option "Mis tickets"
+                  - option "Cerrados"
+              - generic [ref=e120] [cursor=pointer]:
+                - checkbox "Solo vencidos" [ref=e121]
+                - generic [ref=e122]: Solo vencidos
+        - table [ref=e125]:
+          - rowgroup [ref=e126]:
+            - row "Solicitud Tiempo Asignación Estado Tema" [ref=e127]:
+              - columnheader [ref=e128]:
+                - checkbox [ref=e130]
+              - columnheader "Solicitud" [ref=e131]
+              - columnheader "Tiempo" [ref=e132]
+              - columnheader "Asignación" [ref=e133]
+              - columnheader "Estado" [ref=e134]
+              - columnheader "Tema" [ref=e135]
+              - columnheader [ref=e136]
+          - rowgroup [ref=e137]:
+            - row [ref=e138]:
+              - cell [ref=e139]
+              - cell [ref=e141]
+              - cell [ref=e143]
+              - cell [ref=e145]
+              - cell [ref=e147]
+              - cell [ref=e149]
+              - cell [ref=e151]
+              - cell [ref=e153]
+              - cell [ref=e155]
+              - cell [ref=e157]
+            - row [ref=e159]:
+              - cell [ref=e160]
+              - cell [ref=e162]
+              - cell [ref=e164]
+              - cell [ref=e166]
+              - cell [ref=e168]
+              - cell [ref=e170]
+              - cell [ref=e172]
+              - cell [ref=e174]
+              - cell [ref=e176]
+              - cell [ref=e178]
+            - row [ref=e180]:
+              - cell [ref=e181]
+              - cell [ref=e183]
+              - cell [ref=e185]
+              - cell [ref=e187]
+              - cell [ref=e189]
+              - cell [ref=e191]
+              - cell [ref=e193]
+              - cell [ref=e195]
+              - cell [ref=e197]
+              - cell [ref=e199]
+            - row [ref=e201]:
+              - cell [ref=e202]
+              - cell [ref=e204]
+              - cell [ref=e206]
+              - cell [ref=e208]
+              - cell [ref=e210]
+              - cell [ref=e212]
+              - cell [ref=e214]
+              - cell [ref=e216]
+              - cell [ref=e218]
+              - cell [ref=e220]
+            - row [ref=e222]:
+              - cell [ref=e223]
+              - cell [ref=e225]
+              - cell [ref=e227]
+              - cell [ref=e229]
+              - cell [ref=e231]
+              - cell [ref=e233]
+              - cell [ref=e235]
+              - cell [ref=e237]
+              - cell [ref=e239]
+              - cell [ref=e241]
+            - row [ref=e243]:
+              - cell [ref=e244]
+              - cell [ref=e246]
+              - cell [ref=e248]
+              - cell [ref=e250]
+              - cell [ref=e252]
+              - cell [ref=e254]
+              - cell [ref=e256]
+              - cell [ref=e258]
+              - cell [ref=e260]
+              - cell [ref=e262]
+            - row [ref=e264]:
+              - cell [ref=e265]
+              - cell [ref=e267]
+              - cell [ref=e269]
+              - cell [ref=e271]
+              - cell [ref=e273]
+              - cell [ref=e275]
+              - cell [ref=e277]
+              - cell [ref=e279]
+              - cell [ref=e281]
+              - cell [ref=e283]
+            - row [ref=e285]:
+              - cell [ref=e286]
+              - cell [ref=e288]
+              - cell [ref=e290]
+              - cell [ref=e292]
+              - cell [ref=e294]
+              - cell [ref=e296]
+              - cell [ref=e298]
+              - cell [ref=e300]
+              - cell [ref=e302]
+              - cell [ref=e304]

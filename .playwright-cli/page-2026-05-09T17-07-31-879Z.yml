@@ -1,0 +1,767 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: os
+      - generic [ref=e7]: osTicket
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - link "Tickets" [ref=e10] [cursor=pointer]:
+          - /url: /tickets
+          - img [ref=e11]
+          - generic [ref=e14]: Tickets
+        - link "Estadísticas" [ref=e15] [cursor=pointer]:
+          - /url: /stats
+          - img [ref=e16]
+          - generic [ref=e18]: Estadísticas
+      - button "Bandejas" [ref=e20]:
+        - img [ref=e21]
+        - text: Bandejas
+      - link "Búsqueda avanzada" [ref=e23] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e24]
+        - generic [ref=e27]: Búsqueda avanzada
+    - generic [ref=e29]:
+      - generic [ref=e31]: osTicket Portal
+      - generic [ref=e32]: v1.0
+  - generic [ref=e33]:
+    - banner [ref=e34]:
+      - heading "Tickets" [level=1] [ref=e36]
+      - generic [ref=e37]:
+        - generic [ref=e39]:
+          - img [ref=e40]
+          - textbox "Buscar tickets…" [ref=e43]
+        - button "Activar modo oscuro" [ref=e44]:
+          - img [ref=e45]
+        - generic [ref=e47]:
+          - generic [ref=e49]: M
+          - generic [ref=e51]: Gustavo Quiero
+        - button "Cerrar sesión" [ref=e52]:
+          - img [ref=e53]
+    - main [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e59]:
+          - heading "Tickets" [level=1] [ref=e60]
+          - paragraph [ref=e282]: 60 tickets encontrados
+        - generic [ref=e61]:
+          - generic [ref=e62]:
+            - img [ref=e63]
+            - generic [ref=e65]: Filtros
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - generic [ref=e68]: Estado
+              - combobox [ref=e69]:
+                - option "Todos" [selected]
+                - option "Abierto"
+                - option "Resuelto"
+                - option "Cerrado"
+            - generic [ref=e70]:
+              - generic [ref=e71]: Departamento
+              - combobox [ref=e72]:
+                - option "Todos" [selected]
+                - option "Contacto"
+                - option "Gustavo"
+                - option "Mantenimiento"
+                - option "Soporte"
+                - option "Ventas"
+            - generic [ref=e73]:
+              - generic [ref=e74]: Agente
+              - combobox [ref=e75]:
+                - option "Todos" [selected]
+                - option "Felipe Melo"
+                - option "Gustavo Quiero"
+                - option "Mariano Melo"
+            - generic [ref=e76]:
+              - generic [ref=e77]: Prioridad
+              - combobox [ref=e78]:
+                - option "Todas" [selected]
+                - option "Baja"
+                - option "Normal"
+                - option "Alta"
+                - option "Emergencia"
+            - generic [ref=e79]:
+              - generic [ref=e80]: Tema
+              - combobox [ref=e81]:
+                - option "Todos" [selected]
+                - option "Comentarios"
+                - option "Consulta general"
+                - option "ERPSync"
+                - option "Errores"
+                - option "Informar de un problema"
+                - option "Instalación"
+                - option "Problema de acceso"
+                - option "Soporte/Config"
+            - generic [ref=e82]:
+              - generic [ref=e83]: Desde
+              - textbox [ref=e84]
+            - generic [ref=e85]:
+              - generic [ref=e86]: Hasta
+              - textbox [ref=e87]
+            - generic [ref=e88]:
+              - generic [ref=e89]:
+                - generic [ref=e90]: Cola
+                - combobox [ref=e91]:
+                  - option "Abiertos" [selected]
+                  - option "Mis tickets"
+                  - option "Cerrados"
+              - generic [ref=e92] [cursor=pointer]:
+                - checkbox "Solo vencidos" [ref=e93]
+                - generic [ref=e94]: Solo vencidos
+        - table [ref=e97]:
+          - rowgroup [ref=e98]:
+            - row "# Asunto Cliente Estado Prioridad Depto Tema Agente Atraso Creado" [ref=e99]:
+              - columnheader [ref=e100]:
+                - checkbox [ref=e283]
+              - columnheader "#" [ref=e102]
+              - columnheader "Asunto" [ref=e103]
+              - columnheader "Cliente" [ref=e104]
+              - columnheader "Estado" [ref=e105]
+              - columnheader "Prioridad" [ref=e106]
+              - columnheader "Depto" [ref=e107]
+              - columnheader "Tema" [ref=e108]
+              - columnheader "Agente" [ref=e109]
+              - columnheader "Atraso" [ref=e110]
+              - columnheader "Creado" [ref=e111]
+              - columnheader [ref=e112]
+          - rowgroup [ref=e113]:
+            - row "988771 Nuevo pago recibido - consulta - Paquete Consulta — 500/mes BaseAPI Abierto Normal Soporte — — -143min 9 may 2026" [ref=e284] [cursor=pointer]:
+              - cell [ref=e285]:
+                - checkbox [ref=e286]
+              - cell "988771" [ref=e287]
+              - cell "Nuevo pago recibido - consulta - Paquete Consulta — 500/mes" [ref=e288]:
+                - generic [ref=e289]: Nuevo pago recibido - consulta - Paquete Consulta — 500/mes
+              - cell "BaseAPI" [ref=e290]
+              - cell "Abierto" [ref=e291]:
+                - generic [ref=e292]: Abierto
+              - cell "Normal" [ref=e294]:
+                - generic [ref=e295]:
+                  - img [ref=e296]
+                  - text: Normal
+              - cell "Soporte" [ref=e297]
+              - cell "—" [ref=e298]:
+                - generic [ref=e299]: —
+              - cell "—" [ref=e300]
+              - cell "-143min" [ref=e301]
+              - cell "9 may 2026" [ref=e302]
+              - cell [ref=e303]:
+                - generic [ref=e305]:
+                  - button "Asignarme" [ref=e306]:
+                    - img [ref=e307]
+                  - button "Cambiar estado" [ref=e312]:
+                    - img [ref=e313]
+                  - button "Responder" [ref=e315]:
+                    - img [ref=e316]
+            - row "988770 Nuevo pago recibido - consulta - Paquete Consulta — 500/mes BaseAPI Abierto Normal Soporte — — -141min 9 may 2026" [ref=e318] [cursor=pointer]:
+              - cell [ref=e319]:
+                - checkbox [ref=e320]
+              - cell "988770" [ref=e321]
+              - cell "Nuevo pago recibido - consulta - Paquete Consulta — 500/mes" [ref=e322]:
+                - generic [ref=e323]: Nuevo pago recibido - consulta - Paquete Consulta — 500/mes
+              - cell "BaseAPI" [ref=e324]
+              - cell "Abierto" [ref=e325]:
+                - generic [ref=e326]: Abierto
+              - cell "Normal" [ref=e328]:
+                - generic [ref=e329]:
+                  - img [ref=e330]
+                  - text: Normal
+              - cell "Soporte" [ref=e331]
+              - cell "—" [ref=e332]:
+                - generic [ref=e333]: —
+              - cell "—" [ref=e334]
+              - cell "-141min" [ref=e335]
+              - cell "9 may 2026" [ref=e336]
+              - cell [ref=e337]:
+                - generic [ref=e339]:
+                  - button "Asignarme" [ref=e340]:
+                    - img [ref=e341]
+                  - button "Cambiar estado" [ref=e346]:
+                    - img [ref=e347]
+                  - button "Responder" [ref=e349]:
+                    - img [ref=e350]
+            - row "988768 Problema con impresora fiscal - TEST FRONTEND Gustavo Quiero Abierto Normal Soporte — Mariano Melo 5h 9 may 2026" [ref=e352] [cursor=pointer]:
+              - cell [ref=e353]:
+                - checkbox [ref=e354]
+              - cell "988768" [ref=e355]
+              - cell "Problema con impresora fiscal - TEST FRONTEND" [ref=e356]:
+                - generic [ref=e357]: Problema con impresora fiscal - TEST FRONTEND
+              - cell "Gustavo Quiero" [ref=e358]
+              - cell "Abierto" [ref=e359]:
+                - generic [ref=e360]: Abierto
+              - cell "Normal" [ref=e362]:
+                - generic [ref=e363]:
+                  - img [ref=e364]
+                  - text: Normal
+              - cell "Soporte" [ref=e365]
+              - cell "—" [ref=e366]:
+                - generic [ref=e367]: —
+              - cell "Mariano Melo" [ref=e368]
+              - cell "5h" [ref=e369]
+              - cell "9 may 2026" [ref=e370]
+              - cell [ref=e371]:
+                - generic [ref=e373]:
+                  - button "Cambiar estado" [ref=e375]:
+                    - img [ref=e376]
+                  - button "Responder" [ref=e378]:
+                    - img [ref=e379]
+            - row "988767 Undelivered Mail Returned to Sender Mailer-Daemon Abierto Normal Soporte — Mariano Melo 7h 9 may 2026" [ref=e381] [cursor=pointer]:
+              - cell [ref=e382]:
+                - checkbox [ref=e383]
+              - cell "988767" [ref=e384]
+              - cell "Undelivered Mail Returned to Sender" [ref=e385]:
+                - generic [ref=e386]: Undelivered Mail Returned to Sender
+              - cell "Mailer-Daemon" [ref=e387]
+              - cell "Abierto" [ref=e388]:
+                - generic [ref=e389]: Abierto
+              - cell "Normal" [ref=e391]:
+                - generic [ref=e392]:
+                  - img [ref=e393]
+                  - text: Normal
+              - cell "Soporte" [ref=e394]
+              - cell "—" [ref=e395]:
+                - generic [ref=e396]: —
+              - cell "Mariano Melo" [ref=e397]
+              - cell "7h" [ref=e398]
+              - cell "9 may 2026" [ref=e399]
+              - cell [ref=e400]:
+                - generic [ref=e402]:
+                  - button "Cambiar estado" [ref=e404]:
+                    - img [ref=e405]
+                  - button "Responder" [ref=e407]:
+                    - img [ref=e408]
+            - row "988766 Nuevo pago recibido - consulta - Paquete Consulta — 500/mes BaseAPI Abierto Normal Soporte — — 8h 9 may 2026" [ref=e410] [cursor=pointer]:
+              - cell [ref=e411]:
+                - checkbox [ref=e412]
+              - cell "988766" [ref=e413]
+              - cell "Nuevo pago recibido - consulta - Paquete Consulta — 500/mes" [ref=e414]:
+                - generic [ref=e415]: Nuevo pago recibido - consulta - Paquete Consulta — 500/mes
+              - cell "BaseAPI" [ref=e416]
+              - cell "Abierto" [ref=e417]:
+                - generic [ref=e418]: Abierto
+              - cell "Normal" [ref=e420]:
+                - generic [ref=e421]:
+                  - img [ref=e422]
+                  - text: Normal
+              - cell "Soporte" [ref=e423]
+              - cell "—" [ref=e424]:
+                - generic [ref=e425]: —
+              - cell "—" [ref=e426]
+              - cell "8h" [ref=e427]
+              - cell "9 may 2026" [ref=e428]
+              - cell [ref=e429]:
+                - generic [ref=e431]:
+                  - button "Asignarme" [ref=e432]:
+                    - img [ref=e433]
+                  - button "Cambiar estado" [ref=e438]:
+                    - img [ref=e439]
+                  - button "Responder" [ref=e441]:
+                    - img [ref=e442]
+            - row "988764 $13.93 payment to WP Umbrella was unsuccessful WP Umbrella Abierto Normal Soporte — — 9h 9 may 2026" [ref=e444] [cursor=pointer]:
+              - cell [ref=e445]:
+                - checkbox [ref=e446]
+              - cell "988764" [ref=e447]
+              - cell "$13.93 payment to WP Umbrella was unsuccessful" [ref=e448]:
+                - generic [ref=e449]: $13.93 payment to WP Umbrella was unsuccessful
+              - cell "WP Umbrella" [ref=e450]
+              - cell "Abierto" [ref=e451]:
+                - generic [ref=e452]: Abierto
+              - cell "Normal" [ref=e454]:
+                - generic [ref=e455]:
+                  - img [ref=e456]
+                  - text: Normal
+              - cell "Soporte" [ref=e457]
+              - cell "—" [ref=e458]:
+                - generic [ref=e459]: —
+              - cell "—" [ref=e460]
+              - cell "9h" [ref=e461]
+              - cell "9 may 2026" [ref=e462]
+              - cell [ref=e463]:
+                - generic [ref=e465]:
+                  - button "Asignarme" [ref=e466]:
+                    - img [ref=e467]
+                  - button "Cambiar estado" [ref=e472]:
+                    - img [ref=e473]
+                  - button "Responder" [ref=e475]:
+                    - img [ref=e476]
+            - 'row "988733 Re: Detalle acceso XML DTE y boletas de honorarios | BaseAPI Matías Navarrete Abierto Normal Soporte — Mariano Melo 11h 9 may 2026" [ref=e478] [cursor=pointer]':
+              - cell [ref=e479]:
+                - checkbox [ref=e480]
+              - cell "988733" [ref=e481]
+              - 'cell "Re: Detalle acceso XML DTE y boletas de honorarios | BaseAPI" [ref=e482]':
+                - generic [ref=e483]: "Re: Detalle acceso XML DTE y boletas de honorarios | BaseAPI"
+              - cell "Matías Navarrete" [ref=e484]
+              - cell "Abierto" [ref=e485]:
+                - generic [ref=e486]: Abierto
+              - cell "Normal" [ref=e488]:
+                - generic [ref=e489]:
+                  - img [ref=e490]
+                  - text: Normal
+              - cell "Soporte" [ref=e491]
+              - cell "—" [ref=e492]:
+                - generic [ref=e493]: —
+              - cell "Mariano Melo" [ref=e494]
+              - cell "11h" [ref=e495]
+              - cell "9 may 2026" [ref=e496]
+              - cell [ref=e497]:
+                - generic [ref=e499]:
+                  - button "Cambiar estado" [ref=e501]:
+                    - img [ref=e502]
+                  - button "Responder" [ref=e504]:
+                    - img [ref=e505]
+            - 'row "988724 Re: ¿Te ayudamos a integrar BaseAPI? Miguel Angel Vargas (VIA2) Abierto Normal Soporte — Mariano Melo 11h 9 may 2026" [ref=e507] [cursor=pointer]':
+              - cell [ref=e508]:
+                - checkbox [ref=e509]
+              - cell "988724" [ref=e510]
+              - 'cell "Re: ¿Te ayudamos a integrar BaseAPI?" [ref=e511]':
+                - generic [ref=e512]: "Re: ¿Te ayudamos a integrar BaseAPI?"
+              - cell "Miguel Angel Vargas (VIA2)" [ref=e513]
+              - cell "Abierto" [ref=e514]:
+                - generic [ref=e515]: Abierto
+              - cell "Normal" [ref=e517]:
+                - generic [ref=e518]:
+                  - img [ref=e519]
+                  - text: Normal
+              - cell "Soporte" [ref=e520]
+              - cell "—" [ref=e521]:
+                - generic [ref=e522]: —
+              - cell "Mariano Melo" [ref=e523]
+              - cell "11h" [ref=e524]
+              - cell "9 may 2026" [ref=e525]
+              - cell [ref=e526]:
+                - generic [ref=e528]:
+                  - button "Cambiar estado" [ref=e530]:
+                    - img [ref=e531]
+                  - button "Responder" [ref=e533]:
+                    - img [ref=e534]
+            - 'row "988723 Re: Integración de tienda online con Softland Nicolás Guillén Abierto Normal Soporte — Mariano Melo 11h 9 may 2026" [ref=e536] [cursor=pointer]':
+              - cell [ref=e537]:
+                - checkbox [ref=e538]
+              - cell "988723" [ref=e539]
+              - 'cell "Re: Integración de tienda online con Softland" [ref=e540]':
+                - generic [ref=e541]: "Re: Integración de tienda online con Softland"
+              - cell "Nicolás Guillén" [ref=e542]
+              - cell "Abierto" [ref=e543]:
+                - generic [ref=e544]: Abierto
+              - cell "Normal" [ref=e546]:
+                - generic [ref=e547]:
+                  - img [ref=e548]
+                  - text: Normal
+              - cell "Soporte" [ref=e549]
+              - cell "—" [ref=e550]:
+                - generic [ref=e551]: —
+              - cell "Mariano Melo" [ref=e552]
+              - cell "11h" [ref=e553]
+              - cell "9 may 2026" [ref=e554]
+              - cell [ref=e555]:
+                - generic [ref=e557]:
+                  - button "Cambiar estado" [ref=e559]:
+                    - img [ref=e560]
+                  - button "Responder" [ref=e562]:
+                    - img [ref=e563]
+            - 'row "988740 RE: Confirmación de reunión - ERPSync Juan Saez Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e565] [cursor=pointer]':
+              - cell [ref=e566]:
+                - checkbox [ref=e567]
+              - cell "988740" [ref=e568]
+              - 'cell "RE: Confirmación de reunión - ERPSync" [ref=e569]':
+                - generic [ref=e570]: "RE: Confirmación de reunión - ERPSync"
+              - cell "Juan Saez" [ref=e571]
+              - cell "Abierto" [ref=e572]:
+                - generic [ref=e573]: Abierto
+              - cell "Normal" [ref=e575]:
+                - generic [ref=e576]:
+                  - img [ref=e577]
+                  - text: Normal
+              - cell "Gustavo" [ref=e578]
+              - cell "—" [ref=e579]:
+                - generic [ref=e580]: —
+              - cell "Gustavo Quiero" [ref=e581]
+              - cell "11h" [ref=e582]
+              - cell "9 may 2026" [ref=e583]
+              - cell [ref=e584]:
+                - generic [ref=e586]:
+                  - button "Cambiar estado" [ref=e588]:
+                    - img [ref=e589]
+                  - button "Responder" [ref=e591]:
+                    - img [ref=e592]
+            - 'row "988721 Fwd: FAVOR Mario Zúñiga M Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e594] [cursor=pointer]':
+              - cell [ref=e595]:
+                - checkbox [ref=e596]
+              - cell "988721" [ref=e597]
+              - 'cell "Fwd: FAVOR" [ref=e598]':
+                - generic [ref=e599]: "Fwd: FAVOR"
+              - cell "Mario Zúñiga M" [ref=e600]
+              - cell "Abierto" [ref=e601]:
+                - generic [ref=e602]: Abierto
+              - cell "Normal" [ref=e604]:
+                - generic [ref=e605]:
+                  - img [ref=e606]
+                  - text: Normal
+              - cell "Gustavo" [ref=e607]
+              - cell "—" [ref=e608]:
+                - generic [ref=e609]: —
+              - cell "Gustavo Quiero" [ref=e610]
+              - cell "11h" [ref=e611]
+              - cell "9 may 2026" [ref=e612]
+              - cell [ref=e613]:
+                - generic [ref=e615]:
+                  - button "Cambiar estado" [ref=e617]:
+                    - img [ref=e618]
+                  - button "Responder" [ref=e620]:
+                    - img [ref=e621]
+            - 'row "988759 Re: COT-2026-3202 — Propuesta Plataforma de Informes Tributarios | BaseAPI cristian.bravo Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e623] [cursor=pointer]':
+              - cell [ref=e624]:
+                - checkbox [ref=e625]
+              - cell "988759" [ref=e626]
+              - 'cell "Re: COT-2026-3202 — Propuesta Plataforma de Informes Tributarios | BaseAPI" [ref=e627]':
+                - generic [ref=e628]: "Re: COT-2026-3202 — Propuesta Plataforma de Informes Tributarios | BaseAPI"
+              - cell "cristian.bravo" [ref=e629]
+              - cell "Abierto" [ref=e630]:
+                - generic [ref=e631]: Abierto
+              - cell "Normal" [ref=e633]:
+                - generic [ref=e634]:
+                  - img [ref=e635]
+                  - text: Normal
+              - cell "Gustavo" [ref=e636]
+              - cell "—" [ref=e637]:
+                - generic [ref=e638]: —
+              - cell "Gustavo Quiero" [ref=e639]
+              - cell "11h" [ref=e640]
+              - cell "9 may 2026" [ref=e641]
+              - cell [ref=e642]:
+                - generic [ref=e644]:
+                  - button "Cambiar estado" [ref=e646]:
+                    - img [ref=e647]
+                  - button "Responder" [ref=e649]:
+                    - img [ref=e650]
+            - row "988739 Cotización COT-2026-3205 — Upgrade a ERPSync – Salqui Tecnológica Chile - Mariano Melo Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e652] [cursor=pointer]:
+              - cell [ref=e653]:
+                - checkbox [ref=e654]
+              - cell "988739" [ref=e655]
+              - cell "Cotización COT-2026-3205 — Upgrade a ERPSync – Salqui" [ref=e656]:
+                - generic [ref=e657]: Cotización COT-2026-3205 — Upgrade a ERPSync – Salqui
+              - cell "Tecnológica Chile - Mariano Melo" [ref=e658]
+              - cell "Abierto" [ref=e659]:
+                - generic [ref=e660]: Abierto
+              - cell "Normal" [ref=e662]:
+                - generic [ref=e663]:
+                  - img [ref=e664]
+                  - text: Normal
+              - cell "Gustavo" [ref=e665]
+              - cell "—" [ref=e666]:
+                - generic [ref=e667]: —
+              - cell "Gustavo Quiero" [ref=e668]
+              - cell "11h" [ref=e669]
+              - cell "9 may 2026" [ref=e670]
+              - cell [ref=e671]:
+                - generic [ref=e673]:
+                  - button "Cambiar estado" [ref=e675]:
+                    - img [ref=e676]
+                  - button "Responder" [ref=e678]:
+                    - img [ref=e679]
+            - 'row "988742 RE: Confirmación de reunión - ERPSync Tecnológica Chile - Mariano Melo Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e681] [cursor=pointer]':
+              - cell [ref=e682]:
+                - checkbox [ref=e683]
+              - cell "988742" [ref=e684]
+              - 'cell "RE: Confirmación de reunión - ERPSync" [ref=e685]':
+                - generic [ref=e686]: "RE: Confirmación de reunión - ERPSync"
+              - cell "Tecnológica Chile - Mariano Melo" [ref=e687]
+              - cell "Abierto" [ref=e688]:
+                - generic [ref=e689]: Abierto
+              - cell "Normal" [ref=e691]:
+                - generic [ref=e692]:
+                  - img [ref=e693]
+                  - text: Normal
+              - cell "Gustavo" [ref=e694]
+              - cell "—" [ref=e695]:
+                - generic [ref=e696]: —
+              - cell "Gustavo Quiero" [ref=e697]
+              - cell "11h" [ref=e698]
+              - cell "9 may 2026" [ref=e699]
+              - cell [ref=e700]:
+                - generic [ref=e702]:
+                  - button "Cambiar estado" [ref=e704]:
+                    - img [ref=e705]
+                  - button "Responder" [ref=e707]:
+                    - img [ref=e708]
+            - 'row "988746 Re: COT-2026-3202 — Propuesta Plataforma de Informes Tributarios | BaseAPI Tecnológica Chile - Mariano Melo Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e710] [cursor=pointer]':
+              - cell [ref=e711]:
+                - checkbox [ref=e712]
+              - cell "988746" [ref=e713]
+              - 'cell "Re: COT-2026-3202 — Propuesta Plataforma de Informes Tributarios | BaseAPI" [ref=e714]':
+                - generic [ref=e715]: "Re: COT-2026-3202 — Propuesta Plataforma de Informes Tributarios | BaseAPI"
+              - cell "Tecnológica Chile - Mariano Melo" [ref=e716]
+              - cell "Abierto" [ref=e717]:
+                - generic [ref=e718]: Abierto
+              - cell "Normal" [ref=e720]:
+                - generic [ref=e721]:
+                  - img [ref=e722]
+                  - text: Normal
+              - cell "Gustavo" [ref=e723]
+              - cell "—" [ref=e724]:
+                - generic [ref=e725]: —
+              - cell "Gustavo Quiero" [ref=e726]
+              - cell "11h" [ref=e727]
+              - cell "9 may 2026" [ref=e728]
+              - cell [ref=e729]:
+                - generic [ref=e731]:
+                  - button "Cambiar estado" [ref=e733]:
+                    - img [ref=e734]
+                  - button "Responder" [ref=e736]:
+                    - img [ref=e737]
+            - row "988758 Re:COT-2026-3202 — Propuesta Plataforma de Informes Tributarios | BaseAPI Tecnológica Chile - Mariano Melo Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e739] [cursor=pointer]:
+              - cell [ref=e740]:
+                - checkbox [ref=e741]
+              - cell "988758" [ref=e742]
+              - cell "Re:COT-2026-3202 — Propuesta Plataforma de Informes Tributarios | BaseAPI" [ref=e743]:
+                - generic [ref=e744]: Re:COT-2026-3202 — Propuesta Plataforma de Informes Tributarios | BaseAPI
+              - cell "Tecnológica Chile - Mariano Melo" [ref=e745]
+              - cell "Abierto" [ref=e746]:
+                - generic [ref=e747]: Abierto
+              - cell "Normal" [ref=e749]:
+                - generic [ref=e750]:
+                  - img [ref=e751]
+                  - text: Normal
+              - cell "Gustavo" [ref=e752]
+              - cell "—" [ref=e753]:
+                - generic [ref=e754]: —
+              - cell "Gustavo Quiero" [ref=e755]
+              - cell "11h" [ref=e756]
+              - cell "9 may 2026" [ref=e757]
+              - cell [ref=e758]:
+                - generic [ref=e760]:
+                  - button "Cambiar estado" [ref=e762]:
+                    - img [ref=e763]
+                  - button "Responder" [ref=e765]:
+                    - img [ref=e766]
+            - 'row "988720 Reenviar: Solicitud de aclaración y comprobantes de pago Facturación y Cobranzas - Tecnológica Chile Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e768] [cursor=pointer]':
+              - cell [ref=e769]:
+                - checkbox [ref=e770]
+              - cell "988720" [ref=e771]
+              - 'cell "Reenviar: Solicitud de aclaración y comprobantes de pago" [ref=e772]':
+                - generic [ref=e773]: "Reenviar: Solicitud de aclaración y comprobantes de pago"
+              - cell "Facturación y Cobranzas - Tecnológica Chile" [ref=e774]
+              - cell "Abierto" [ref=e775]:
+                - generic [ref=e776]: Abierto
+              - cell "Normal" [ref=e778]:
+                - generic [ref=e779]:
+                  - img [ref=e780]
+                  - text: Normal
+              - cell "Gustavo" [ref=e781]
+              - cell "—" [ref=e782]:
+                - generic [ref=e783]: —
+              - cell "Gustavo Quiero" [ref=e784]
+              - cell "11h" [ref=e785]
+              - cell "9 may 2026" [ref=e786]
+              - cell [ref=e787]:
+                - generic [ref=e789]:
+                  - button "Cambiar estado" [ref=e791]:
+                    - img [ref=e792]
+                  - button "Responder" [ref=e794]:
+                    - img [ref=e795]
+            - row "988719 Cotización COT-2026-3214 — Suscripción ERPSync – WooCommerce – Cubiertas MyC Tecnológica Chile - Mariano Melo Abierto Normal Soporte — Mariano Melo 11h 9 may 2026" [ref=e797] [cursor=pointer]:
+              - cell [ref=e798]:
+                - checkbox [ref=e799]
+              - cell "988719" [ref=e800]
+              - cell "Cotización COT-2026-3214 — Suscripción ERPSync – WooCommerce – Cubiertas MyC" [ref=e801]:
+                - generic [ref=e802]: Cotización COT-2026-3214 — Suscripción ERPSync – WooCommerce – Cubiertas MyC
+              - cell "Tecnológica Chile - Mariano Melo" [ref=e803]
+              - cell "Abierto" [ref=e804]:
+                - generic [ref=e805]: Abierto
+              - cell "Normal" [ref=e807]:
+                - generic [ref=e808]:
+                  - img [ref=e809]
+                  - text: Normal
+              - cell "Soporte" [ref=e810]
+              - cell "—" [ref=e811]:
+                - generic [ref=e812]: —
+              - cell "Mariano Melo" [ref=e813]
+              - cell "11h" [ref=e814]
+              - cell "9 may 2026" [ref=e815]
+              - cell [ref=e816]:
+                - generic [ref=e818]:
+                  - button "Cambiar estado" [ref=e820]:
+                    - img [ref=e821]
+                  - button "Responder" [ref=e823]:
+                    - img [ref=e824]
+            - 'row "988716 Re: ¿Te ayudamos a integrar BaseAPI? Miguel Angel Vargas (VIA2) Abierto Normal Soporte — Mariano Melo 11h 9 may 2026" [ref=e826] [cursor=pointer]':
+              - cell [ref=e827]:
+                - checkbox [ref=e828]
+              - cell "988716" [ref=e829]
+              - 'cell "Re: ¿Te ayudamos a integrar BaseAPI?" [ref=e830]':
+                - generic [ref=e831]: "Re: ¿Te ayudamos a integrar BaseAPI?"
+              - cell "Miguel Angel Vargas (VIA2)" [ref=e832]
+              - cell "Abierto" [ref=e833]:
+                - generic [ref=e834]: Abierto
+              - cell "Normal" [ref=e836]:
+                - generic [ref=e837]:
+                  - img [ref=e838]
+                  - text: Normal
+              - cell "Soporte" [ref=e839]
+              - cell "—" [ref=e840]:
+                - generic [ref=e841]: —
+              - cell "Mariano Melo" [ref=e842]
+              - cell "11h" [ref=e843]
+              - cell "9 may 2026" [ref=e844]
+              - cell [ref=e845]:
+                - generic [ref=e847]:
+                  - button "Cambiar estado" [ref=e849]:
+                    - img [ref=e850]
+                  - button "Responder" [ref=e852]:
+                    - img [ref=e853]
+            - 'row "988717 Re: Consulta Edward Venegas bugueño Abierto Normal Soporte — Mariano Melo 11h 9 may 2026" [ref=e855] [cursor=pointer]':
+              - cell [ref=e856]:
+                - checkbox [ref=e857]
+              - cell "988717" [ref=e858]
+              - 'cell "Re: Consulta" [ref=e859]':
+                - generic [ref=e860]: "Re: Consulta"
+              - cell "Edward Venegas bugueño" [ref=e861]
+              - cell "Abierto" [ref=e862]:
+                - generic [ref=e863]: Abierto
+              - cell "Normal" [ref=e865]:
+                - generic [ref=e866]:
+                  - img [ref=e867]
+                  - text: Normal
+              - cell "Soporte" [ref=e868]
+              - cell "—" [ref=e869]:
+                - generic [ref=e870]: —
+              - cell "Mariano Melo" [ref=e871]
+              - cell "11h" [ref=e872]
+              - cell "9 may 2026" [ref=e873]
+              - cell [ref=e874]:
+                - generic [ref=e876]:
+                  - button "Cambiar estado" [ref=e878]:
+                    - img [ref=e879]
+                  - button "Responder" [ref=e881]:
+                    - img [ref=e882]
+            - 'row "988736 Re: Cotización – Servicio de Desarrollo por Tarifa Horaria | Tecnológica Chile dmendez Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e884] [cursor=pointer]':
+              - cell [ref=e885]:
+                - checkbox [ref=e886]
+              - cell "988736" [ref=e887]
+              - 'cell "Re: Cotización – Servicio de Desarrollo por Tarifa Horaria | Tecnológica Chile" [ref=e888]':
+                - generic [ref=e889]: "Re: Cotización – Servicio de Desarrollo por Tarifa Horaria | Tecnológica Chile"
+              - cell "dmendez" [ref=e890]
+              - cell "Abierto" [ref=e891]:
+                - generic [ref=e892]: Abierto
+              - cell "Normal" [ref=e894]:
+                - generic [ref=e895]:
+                  - img [ref=e896]
+                  - text: Normal
+              - cell "Gustavo" [ref=e897]
+              - cell "—" [ref=e898]:
+                - generic [ref=e899]: —
+              - cell "Gustavo Quiero" [ref=e900]
+              - cell "11h" [ref=e901]
+              - cell "9 may 2026" [ref=e902]
+              - cell [ref=e903]:
+                - generic [ref=e905]:
+                  - button "Cambiar estado" [ref=e907]:
+                    - img [ref=e908]
+                  - button "Responder" [ref=e910]:
+                    - img [ref=e911]
+            - 'row "988760 Re: Consulta – Obtención de dirección de casa matriz desde SII con BaseAPI Patricio Saavedra Valenzuela Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e913] [cursor=pointer]':
+              - cell [ref=e914]:
+                - checkbox [ref=e915]
+              - cell "988760" [ref=e916]
+              - 'cell "Re: Consulta – Obtención de dirección de casa matriz desde SII con BaseAPI" [ref=e917]':
+                - generic [ref=e918]: "Re: Consulta – Obtención de dirección de casa matriz desde SII con BaseAPI"
+              - cell "Patricio Saavedra Valenzuela" [ref=e919]
+              - cell "Abierto" [ref=e920]:
+                - generic [ref=e921]: Abierto
+              - cell "Normal" [ref=e923]:
+                - generic [ref=e924]:
+                  - img [ref=e925]
+                  - text: Normal
+              - cell "Gustavo" [ref=e926]
+              - cell "—" [ref=e927]:
+                - generic [ref=e928]: —
+              - cell "Gustavo Quiero" [ref=e929]
+              - cell "11h" [ref=e930]
+              - cell "9 may 2026" [ref=e931]
+              - cell [ref=e932]:
+                - generic [ref=e934]:
+                  - button "Cambiar estado" [ref=e936]:
+                    - img [ref=e937]
+                  - button "Responder" [ref=e939]:
+                    - img [ref=e940]
+            - row "988756 Confirmación de reunión - ERPSync Tecnológica Chile - Mariano Melo Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e942] [cursor=pointer]:
+              - cell [ref=e943]:
+                - checkbox [ref=e944]
+              - cell "988756" [ref=e945]
+              - cell "Confirmación de reunión - ERPSync" [ref=e946]:
+                - generic [ref=e947]: Confirmación de reunión - ERPSync
+              - cell "Tecnológica Chile - Mariano Melo" [ref=e948]
+              - cell "Abierto" [ref=e949]:
+                - generic [ref=e950]: Abierto
+              - cell "Normal" [ref=e952]:
+                - generic [ref=e953]:
+                  - img [ref=e954]
+                  - text: Normal
+              - cell "Gustavo" [ref=e955]
+              - cell "—" [ref=e956]:
+                - generic [ref=e957]: —
+              - cell "Gustavo Quiero" [ref=e958]
+              - cell "11h" [ref=e959]
+              - cell "9 may 2026" [ref=e960]
+              - cell [ref=e961]:
+                - generic [ref=e963]:
+                  - button "Cambiar estado" [ref=e965]:
+                    - img [ref=e966]
+                  - button "Responder" [ref=e968]:
+                    - img [ref=e969]
+            - row "988735 Integración Samex - Tecnológica Chile Tecnológica Chile - Mariano Melo Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e971] [cursor=pointer]:
+              - cell [ref=e972]:
+                - checkbox [ref=e973]
+              - cell "988735" [ref=e974]
+              - cell "Integración Samex - Tecnológica Chile" [ref=e975]:
+                - generic [ref=e976]: Integración Samex - Tecnológica Chile
+              - cell "Tecnológica Chile - Mariano Melo" [ref=e977]
+              - cell "Abierto" [ref=e978]:
+                - generic [ref=e979]: Abierto
+              - cell "Normal" [ref=e981]:
+                - generic [ref=e982]:
+                  - img [ref=e983]
+                  - text: Normal
+              - cell "Gustavo" [ref=e984]
+              - cell "—" [ref=e985]:
+                - generic [ref=e986]: —
+              - cell "Gustavo Quiero" [ref=e987]
+              - cell "11h" [ref=e988]
+              - cell "9 may 2026" [ref=e989]
+              - cell [ref=e990]:
+                - generic [ref=e992]:
+                  - button "Cambiar estado" [ref=e994]:
+                    - img [ref=e995]
+                  - button "Responder" [ref=e997]:
+                    - img [ref=e998]
+            - 'row "988747 Re: COT-2026-3203 - Automatización de Descarga de Documentos Tributarios Softland Cloud cristianbravo Abierto Normal Gustavo — Gustavo Quiero 11h 9 may 2026" [ref=e1000] [cursor=pointer]':
+              - cell [ref=e1001]:
+                - checkbox [ref=e1002]
+              - cell "988747" [ref=e1003]
+              - 'cell "Re: COT-2026-3203 - Automatización de Descarga de Documentos Tributarios Softland Cloud" [ref=e1004]':
+                - generic [ref=e1005]: "Re: COT-2026-3203 - Automatización de Descarga de Documentos Tributarios Softland Cloud"
+              - cell "cristianbravo" [ref=e1006]
+              - cell "Abierto" [ref=e1007]:
+                - generic [ref=e1008]: Abierto
+              - cell "Normal" [ref=e1010]:
+                - generic [ref=e1011]:
+                  - img [ref=e1012]
+                  - text: Normal
+              - cell "Gustavo" [ref=e1013]
+              - cell "—" [ref=e1014]:
+                - generic [ref=e1015]: —
+              - cell "Gustavo Quiero" [ref=e1016]
+              - cell "11h" [ref=e1017]
+              - cell "9 may 2026" [ref=e1018]
+              - cell [ref=e1019]:
+                - generic [ref=e1021]:
+                  - button "Cambiar estado" [ref=e1023]:
+                    - img [ref=e1024]
+                  - button "Responder" [ref=e1026]:
+                    - img [ref=e1027]
+        - generic [ref=e1029]:
+          - paragraph [ref=e1030]: Página 1 de 3
+          - generic [ref=e1031]:
+            - button "Anterior" [disabled] [ref=e1032]:
+              - img [ref=e1033]
+              - text: Anterior
+            - button "Siguiente" [ref=e1035]:
+              - text: Siguiente
+              - img [ref=e1036]

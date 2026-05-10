@@ -1,0 +1,152 @@
+- generic [ref=e19]:
+  - complementary [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]: os
+      - generic [ref=e23]: osTicket
+    - navigation [ref=e24]:
+      - generic [ref=e25]:
+        - link "Tickets" [ref=e26] [cursor=pointer]:
+          - /url: /tickets
+          - img [ref=e27]
+          - generic [ref=e30]: Tickets
+        - link "Estadísticas" [ref=e31] [cursor=pointer]:
+          - /url: /stats
+          - img [ref=e32]
+          - generic [ref=e34]: Estadísticas
+      - button "Bandejas" [ref=e36]:
+        - img [ref=e37]
+        - text: Bandejas
+      - link "Búsqueda avanzada" [ref=e39] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e40]
+        - generic [ref=e43]: Búsqueda avanzada
+    - generic [ref=e45]:
+      - generic [ref=e47]: osTicket Portal
+      - generic [ref=e48]: v1.0
+  - generic [ref=e49]:
+    - banner [ref=e50]:
+      - heading "osTicket" [level=1] [ref=e534]
+      - generic [ref=e53]:
+        - generic [ref=e55]:
+          - img [ref=e56]
+          - textbox "Buscar tickets…" [ref=e59]
+        - button "Activar modo oscuro" [ref=e60]:
+          - img [ref=e61]
+        - generic [ref=e63]:
+          - generic [ref=e65]: M
+          - generic [ref=e67]: Agente
+        - button "Cerrar sesión" [ref=e68]:
+          - img [ref=e69]
+    - main [ref=e72]:
+      - generic [ref=e535]:
+        - generic [ref=e536]:
+          - link "Volver a tickets" [ref=e537] [cursor=pointer]:
+            - /url: /tickets
+            - img [ref=e538]
+            - text: Volver a tickets
+          - generic [ref=e540]:
+            - heading [level=1]
+            - generic [ref=e542]: —
+          - generic [ref=e545]: "#"
+        - generic [ref=e546]:
+          - generic [ref=e547]:
+            - generic [ref=e548]:
+              - img [ref=e549]
+              - paragraph [ref=e551]: No hay mensajes en este ticket.
+            - generic [ref=e552]:
+              - generic [ref=e553]:
+                - button "Negrita" [ref=e554]:
+                  - img [ref=e555]
+                - button "Cursiva" [ref=e557]:
+                  - img [ref=e558]
+                - button "Lista" [ref=e560]:
+                  - img [ref=e561]
+                - button "Enlace" [ref=e562]:
+                  - img [ref=e563]
+                - generic [ref=e566]: HTML
+              - generic [ref=e567]:
+                - heading "Enviar respuesta" [level=3] [ref=e568]:
+                  - img [ref=e569]
+                  - text: Enviar respuesta
+                - textbox "Escribe tu respuesta aquí… (soporta HTML)" [ref=e572]
+                - generic [ref=e573]:
+                  - generic [ref=e574]:
+                    - generic [ref=e575]: "Estado tras respuesta:"
+                    - combobox "Estado tras respuesta:" [ref=e576]:
+                      - option "Sin cambio" [selected]
+                      - option "Abierto"
+                      - option "Resuelto"
+                  - button "Enviar respuesta" [disabled] [ref=e577]:
+                    - img [ref=e578]
+                    - text: Enviar respuesta
+            - generic [ref=e581]:
+              - heading "Agregar nota interna" [level=3] [ref=e582]:
+                - img [ref=e583]
+                - text: Agregar nota interna
+              - textbox "Título de la nota (opcional)" [ref=e586]
+              - textbox "Escribe una nota interna…" [ref=e587]
+              - button "Agregar nota" [disabled] [ref=e589]:
+                - img [ref=e590]
+                - text: Agregar nota
+          - generic [ref=e594]:
+            - generic [ref=e595]:
+              - heading "Información" [level=4] [ref=e596]:
+                - img [ref=e597]
+                - text: Información
+              - generic [ref=e600]:
+                - generic [ref=e601]:
+                  - term [ref=e602]: ID
+                  - definition [ref=e603]: "#"
+                - generic [ref=e604]:
+                  - term [ref=e605]: Creado
+                  - definition [ref=e606]: —
+                - generic [ref=e607]:
+                  - term [ref=e608]: Actualizado
+                  - definition [ref=e609]: —
+            - generic [ref=e610]:
+              - heading "Asignar" [level=4] [ref=e611]:
+                - img [ref=e612]
+                - text: Asignar
+              - generic [ref=e615]:
+                - combobox [ref=e616]:
+                  - option "Seleccionar agente…" [selected]
+                  - option "Felipe Melo"
+                  - option "Gustavo Quiero"
+                  - option "Mariano Melo"
+                - button "Asignar" [disabled] [ref=e617]
+            - generic [ref=e618]:
+              - heading "Cambiar estado" [level=4] [ref=e619]:
+                - img [ref=e620]
+                - text: Cambiar estado
+              - paragraph [ref=e622]: "Actual:"
+              - generic [ref=e623]:
+                - combobox [ref=e624]:
+                  - option "Seleccionar…" [selected]
+                  - option "Abierto"
+                  - option "Resuelto"
+                  - option "Cerrado"
+                - button "Cambiar" [disabled] [ref=e625]
+            - generic [ref=e626]:
+              - heading "Transferir" [level=4] [ref=e627]:
+                - img [ref=e628]
+                - text: Transferir
+              - generic [ref=e631]:
+                - combobox [ref=e632]:
+                  - option "Seleccionar depto…" [selected]
+                  - option "Contacto"
+                  - option "Gustavo"
+                  - option "Mantenimiento"
+                  - option "Soporte"
+                  - option "Ventas"
+                - button "Mover" [disabled] [ref=e633]
+            - generic [ref=e634]:
+              - heading "Asignarme" [level=4] [ref=e635]:
+                - img [ref=e636]
+                - text: Asignarme
+              - button "Asignarme este ticket" [ref=e640]
+            - generic [ref=e641]:
+              - heading "Fusionar tickets" [level=4] [ref=e642]:
+                - img [ref=e643]
+                - text: Fusionar tickets
+              - 'textbox "IDs separados por coma (ej: 42, 57)" [ref=e647]'
+              - button "Fusionar en este ticket" [disabled] [ref=e648]

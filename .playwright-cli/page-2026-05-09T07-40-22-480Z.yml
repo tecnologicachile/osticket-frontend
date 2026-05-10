@@ -1,0 +1,125 @@
+- generic [ref=e19]:
+  - complementary [ref=e20]:
+    - generic [ref=e21]:
+      - generic [ref=e22]: os
+      - generic [ref=e23]: osTicket
+    - navigation [ref=e24]:
+      - generic [ref=e25]:
+        - link "Tickets" [ref=e26] [cursor=pointer]:
+          - /url: /tickets
+          - img [ref=e27]
+          - generic [ref=e30]: Tickets
+        - link "Estadísticas" [ref=e31] [cursor=pointer]:
+          - /url: /stats
+          - img [ref=e32]
+          - generic [ref=e34]: Estadísticas
+      - button "Bandejas" [ref=e36]:
+        - img [ref=e37]
+        - text: Bandejas
+      - link "Búsqueda avanzada" [ref=e39] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e40]
+        - generic [ref=e43]: Búsqueda avanzada
+    - generic [ref=e45]:
+      - generic [ref=e47]: osTicket Portal
+      - generic [ref=e48]: v1.0
+  - generic [ref=e49]:
+    - banner [ref=e50]:
+      - heading "Tickets" [level=1] [ref=e52]
+      - generic [ref=e53]:
+        - generic [ref=e55]:
+          - img [ref=e56]
+          - textbox "Buscar tickets…" [ref=e59]
+        - button "Activar modo oscuro" [ref=e60]:
+          - img [ref=e61]
+        - generic [ref=e63]:
+          - generic [ref=e65]: M
+          - generic [ref=e67]: Agente
+        - button "Cerrar sesión" [ref=e68]:
+          - img [ref=e69]
+    - main [ref=e72]:
+      - generic [ref=e73]:
+        - generic [ref=e75]:
+          - heading "Tickets" [level=1] [ref=e76]
+          - paragraph [ref=e77]: 57 tickets encontrados
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - img [ref=e80]
+            - generic [ref=e82]: Filtros
+          - generic [ref=e83]:
+            - generic [ref=e84]:
+              - generic [ref=e85]: Estado
+              - combobox [ref=e86]:
+                - option "Todos" [selected]
+                - option "Abierto"
+                - option "Resuelto"
+                - option "Cerrado"
+            - generic [ref=e87]:
+              - generic [ref=e88]: Departamento
+              - combobox [ref=e89]:
+                - option "Todos" [selected]
+                - option "Contacto"
+                - option "Gustavo"
+                - option "Mantenimiento"
+                - option "Soporte"
+                - option "Ventas"
+            - generic [ref=e90]:
+              - generic [ref=e91]: Agente
+              - combobox [ref=e92]:
+                - option "Todos" [selected]
+                - option "Felipe Melo"
+                - option "Gustavo Quiero"
+                - option "Mariano Melo"
+            - generic [ref=e93]:
+              - generic [ref=e94]: Prioridad
+              - combobox [ref=e95]:
+                - option "Todas" [selected]
+                - option "Baja"
+                - option "Normal"
+                - option "Alta"
+                - option "Emergencia"
+            - generic [ref=e96]:
+              - generic [ref=e97]: Desde
+              - textbox [ref=e98]
+            - generic [ref=e99]:
+              - generic [ref=e100]: Hasta
+              - textbox [ref=e101]
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - generic [ref=e104]: Cola
+                - combobox [ref=e105]:
+                  - option "Abiertos" [selected]
+                  - option "Mis tickets"
+                  - option "Cerrados"
+              - generic [ref=e106] [cursor=pointer]:
+                - checkbox "Solo vencidos" [ref=e107]
+                - generic [ref=e108]: Solo vencidos
+        - table [ref=e111]:
+          - rowgroup [ref=e112]:
+            - row "# Asunto Cliente Estado Prioridad Depto Agente Fecha" [ref=e113]:
+              - columnheader [ref=e114]:
+                - checkbox [ref=e115]
+              - columnheader "#" [ref=e116]
+              - columnheader "Asunto" [ref=e117]
+              - columnheader "Cliente" [ref=e118]
+              - columnheader "Estado" [ref=e119]
+              - columnheader "Prioridad" [ref=e120]
+              - columnheader "Depto" [ref=e121]
+              - columnheader "Agente" [ref=e122]
+              - columnheader "Fecha" [ref=e123]
+          - rowgroup [ref=e124]:
+            - row "No se encontraron tickets No hay tickets que coincidan con los filtros seleccionados." [ref=e125]:
+              - cell "No se encontraron tickets No hay tickets que coincidan con los filtros seleccionados." [ref=e126]:
+                - generic [ref=e127]:
+                  - img [ref=e129]
+                  - heading "No se encontraron tickets" [level=3] [ref=e133]
+                  - paragraph [ref=e134]: No hay tickets que coincidan con los filtros seleccionados.
+        - generic [ref=e135]:
+          - paragraph [ref=e136]: Página 1 de 3
+          - generic [ref=e137]:
+            - button "Anterior" [disabled] [ref=e138]:
+              - img [ref=e139]
+              - text: Anterior
+            - button "Siguiente" [ref=e141]:
+              - text: Siguiente
+              - img [ref=e142]

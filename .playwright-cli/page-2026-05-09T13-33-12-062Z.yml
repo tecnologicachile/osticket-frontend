@@ -1,0 +1,77 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: os
+      - generic [ref=e7]: osTicket
+    - navigation [ref=e8]:
+      - generic [ref=e9]:
+        - link "Tickets" [ref=e10] [cursor=pointer]:
+          - /url: /tickets
+          - img [ref=e11]
+          - generic [ref=e14]: Tickets
+        - link "Estadísticas" [ref=e15] [cursor=pointer]:
+          - /url: /stats
+          - img [ref=e16]
+          - generic [ref=e18]: Estadísticas
+      - button "Bandejas" [ref=e20]:
+        - img [ref=e21]
+        - text: Bandejas
+      - link "Búsqueda avanzada" [ref=e23] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e24]
+        - generic [ref=e27]: Búsqueda avanzada
+    - generic [ref=e29]:
+      - generic [ref=e31]: osTicket Portal
+      - generic [ref=e32]: v1.0
+  - generic [ref=e33]:
+    - banner [ref=e34]:
+      - heading "Dashboard" [level=1] [ref=e36]
+      - generic [ref=e37]:
+        - generic [ref=e39]:
+          - img [ref=e40]
+          - textbox "Buscar tickets…" [ref=e43]
+        - button "Activar modo oscuro" [ref=e44]:
+          - img [ref=e45]
+        - generic [ref=e47]:
+          - generic [ref=e49]: M
+          - generic [ref=e51]: Gustavo Quiero
+        - button "Cerrar sesión" [ref=e52]:
+          - img [ref=e53]
+    - main [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - heading "Dashboard" [level=1] [ref=e83]
+            - paragraph [ref=e84]: Vista general del helpdesk
+          - generic [ref=e85]: "Última actualización: 09-05-2026, 9:33:08 a. m."
+        - generic [ref=e86]:
+          - generic [ref=e87]:
+            - heading "Total de Tickets" [level=3] [ref=e88]
+            - paragraph [ref=e89]: "1.229"
+          - img [ref=e91]
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - img [ref=e97]
+            - paragraph [ref=e101]: "58"
+            - paragraph [ref=e102]: Abiertos
+            - paragraph [ref=e106]: Abiertos 58 de 1.229 totales = ~5%
+          - generic [ref=e107]:
+            - img [ref=e110]
+            - paragraph [ref=e114]: "34"
+            - paragraph [ref=e115]: Cerrados Hoy
+            - paragraph [ref=e119]: Cerrados Hoy 34 de 1.229 totales = ~3%
+          - generic [ref=e120]:
+            - img [ref=e123]
+            - paragraph [ref=e126]: "26"
+            - paragraph [ref=e127]: Vencidos
+            - paragraph [ref=e131]: Vencidos 26 de 1.229 totales = ~2%
+          - generic [ref=e132]:
+            - img [ref=e135]
+            - paragraph [ref=e140]: "49"
+            - paragraph [ref=e141]: Asignados
+            - paragraph [ref=e145]: Asignados 49 de 1.229 totales = ~4%
+          - generic [ref=e146]:
+            - img [ref=e149]
+            - paragraph [ref=e152]: "9"
+            - paragraph [ref=e153]: Sin Asignar
+            - paragraph [ref=e157]: Sin Asignar 9 de 1.229 totales = ~1%

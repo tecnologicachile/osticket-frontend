@@ -1,0 +1,122 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]: os
+        - generic [ref=e7]: osTicket
+      - navigation [ref=e8]:
+        - generic [ref=e9]:
+          - link "Tickets" [ref=e10] [cursor=pointer]:
+            - /url: /tickets
+            - img [ref=e11]
+            - generic [ref=e14]: Tickets
+          - link "Estadísticas" [ref=e15] [cursor=pointer]:
+            - /url: /stats
+            - img [ref=e16]
+            - generic [ref=e18]: Estadísticas
+        - button "Bandejas" [ref=e20]:
+          - img [ref=e21]
+          - text: Bandejas
+        - link "Búsqueda avanzada" [ref=e23] [cursor=pointer]:
+          - /url: /tickets
+          - img [ref=e24]
+          - generic [ref=e27]: Búsqueda avanzada
+      - generic [ref=e29]:
+        - generic [ref=e31]: osTicket Portal
+        - generic [ref=e32]: v1.0
+    - generic [ref=e33]:
+      - banner [ref=e34]:
+        - heading "Dashboard" [level=1] [ref=e36]
+        - generic [ref=e37]:
+          - generic [ref=e39]:
+            - img [ref=e40]
+            - textbox "Buscar tickets…" [ref=e43]
+          - button "Activar modo oscuro" [ref=e44]:
+            - img [ref=e45]
+          - generic [ref=e47]:
+            - generic [ref=e49]: M
+            - generic [ref=e51]: Gustavo Quiero
+          - button "Cerrar sesión" [ref=e52]:
+            - img [ref=e53]
+      - main [ref=e56]:
+        - generic [ref=e57]:
+          - generic [ref=e81]:
+            - generic [ref=e82]:
+              - heading "Dashboard" [level=1] [ref=e83]
+              - paragraph [ref=e84]: Vista general del helpdesk
+            - generic [ref=e85]:
+              - generic [ref=e86]:
+                - button "Today" [ref=e87]
+                - button "Week" [ref=e88]
+                - button "Month" [ref=e89]
+                - button "All" [ref=e90]
+              - generic [ref=e91]: "Última actualización: 09-05-2026, 9:44:40 a. m."
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - heading "Total de Tickets" [level=3] [ref=e95]
+                - paragraph [ref=e96]: "1.229"
+              - img [ref=e98]
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - heading "Tiempo 1ra Respuesta" [level=3] [ref=e102]
+                - paragraph [ref=e103]: 0 min
+              - img [ref=e105]
+            - generic [ref=e108]:
+              - generic [ref=e109]:
+                - heading "Tiempo Resolución" [level=3] [ref=e110]
+                - paragraph [ref=e111]: 0 hrs
+              - img [ref=e113]
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - img [ref=e120]
+              - paragraph [ref=e124]: "58"
+              - paragraph [ref=e125]: Abiertos
+              - paragraph [ref=e129]: Abiertos 58 de 1.229 totales = ~5%
+            - generic [ref=e130]:
+              - img [ref=e133]
+              - paragraph [ref=e137]: "34"
+              - paragraph [ref=e138]: Cerrados Hoy
+              - paragraph [ref=e142]: Cerrados Hoy 34 de 1.229 totales = ~3%
+            - generic [ref=e143]:
+              - img [ref=e146]
+              - paragraph [ref=e149]: "26"
+              - paragraph [ref=e150]: Vencidos
+              - paragraph [ref=e154]: Vencidos 26 de 1.229 totales = ~2%
+            - generic [ref=e155]:
+              - img [ref=e158]
+              - paragraph [ref=e163]: "49"
+              - paragraph [ref=e164]: Asignados
+              - paragraph [ref=e168]: Asignados 49 de 1.229 totales = ~4%
+            - generic [ref=e169]:
+              - img [ref=e172]
+              - paragraph [ref=e175]: "9"
+              - paragraph [ref=e176]: Sin Asignar
+              - paragraph [ref=e180]: Sin Asignar 9 de 1.229 totales = ~1%
+          - generic [ref=e181]:
+            - heading "Tendencia de Tickets" [level=3] [ref=e182]
+            - generic [ref=e185]:
+              - list [ref=e187]:
+                - listitem [ref=e188]:
+                  - img "Creados legend icon" [ref=e189]
+                  - text: Creados
+                - listitem [ref=e191]:
+                  - img "Resueltos legend icon" [ref=e192]
+                  - text: Resueltos
+              - application [ref=e194]:
+                - generic [ref=e222]:
+                  - generic [ref=e223]:
+                    - generic [ref=e225]: 3/5
+                    - generic [ref=e227]: 4/5
+                    - generic [ref=e229]: 5/5
+                    - generic [ref=e231]: 6/5
+                    - generic [ref=e233]: 7/5
+                    - generic [ref=e235]: 8/5
+                    - generic [ref=e237]: 9/5
+                  - generic [ref=e238]:
+                    - generic [ref=e240]: "0"
+                    - generic [ref=e242]: "15"
+                    - generic [ref=e244]: "30"
+                    - generic [ref=e246]: "45"
+                    - generic [ref=e248]: "60"
+  - generic [ref=e249]: "0"
