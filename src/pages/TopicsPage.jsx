@@ -27,24 +27,39 @@ export default function TopicsPage() {
     status: 'active'
   })
 
-  // Group topics: parents first, then children
+  // Group topics: parents first, then children with rollup counts
   const groupedTopics = useMemo(() => {
     const parents = topics.filter((t) => !t.topic_pid || Number(t.topic_pid) === 0)
     const result = []
     parents.forEach((p) => {
       const children = topics.filter((t) => Number(t.topic_pid) === Number(p.id))
-      const totalOpenCount = (p.open_count || 0) + children.reduce((sum, c) => sum + (c.open_count || 0), 0)
-      result.push({ ...p, isChild: false, total_open_count: totalOpenCount })
-      children.forEach((c) => result.push({ ...c, isChild: true, total_open_count: c.open_count || 0 }))
+      const rollup = (field) => (p[field] || 0) + children.reduce((s, c) => s + (c[field] || 0), 0)
+      result.push({ ...p, isChild: false,
+        total_open: rollup('open_count'),
+        total_resolved: rollup('resolved_count'),
+        total_closed: rollup('closed_count'),
+      })
+      children.forEach((c) => result.push({ ...c, isChild: true,
+        total_open: c.open_count || 0,
+        total_resolved: c.resolved_count || 0,
+        total_closed: c.closed_count || 0,
+      }))
     })
-    // Add orphans
     topics.forEach((t) => {
       if (Number(t.topic_pid) !== 0 && !result.some((r) => r.id === t.id)) {
-        result.push({ ...t, isChild: false, total_open_count: t.open_count || 0 })
+        result.push({ ...t, isChild: false,
+          total_open: t.open_count || 0,
+          total_resolved: t.resolved_count || 0,
+          total_closed: t.closed_count || 0,
+        })
       }
     })
     return result
   }, [topics])
+
+  const handleTicketFilter = (topicName, status) => {
+    navigate(`/tickets?queue=open&topic_name=${encodeURIComponent(topicName)}&status=${status}`)
+  }
 
   const handleOpenModal = (topic = null) => {
     if (topic) {
@@ -82,11 +97,11 @@ export default function TopicsPage() {
     }
 
     const payload = {
-      name: formData.name,
+      topic: formData.name,
       topic_pid: Number(formData.topic_pid),
       dept_id: Number(formData.dept_id),
       ispublic: formData.ispublic ? 1 : 0,
-      status: formData.status
+      isactive: formData.status === 'active' ? 1 : 0,
     }
 
     try {
@@ -151,8 +166,14 @@ export default function TopicsPage() {
                 <th className='px-4 py-3 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider'>
                   Estado
                 </th>
-                <th className='px-4 py-3 text-center text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider'>
+                <th className='px-4 py-3 text-center text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider w-16'>
                   Abiertos
+                </th>
+                <th className='px-4 py-3 text-center text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider w-16'>
+                  Resueltos
+                </th>
+                <th className='px-4 py-3 text-center text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider w-16'>
+                  Cerrados
                 </th>
                 <th className='px-4 py-3 text-right text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider'>
                   Acciones
@@ -162,7 +183,7 @@ export default function TopicsPage() {
             <tbody className='divide-y divide-gray-100 dark:divide-gray-800'>
               {isLoading ? (
                 Array.from({ length: 5 }).map((_, i) => (
-                  <TableRowSkeleton key={i} cols={5} />
+                  <TableRowSkeleton key={i} cols={7} />
                 ))
               ) : groupedTopics.length === 0 ? (
                 <tr>
@@ -209,7 +230,7 @@ export default function TopicsPage() {
                     <td className='px-4 py-3 text-center'>
                       {topic.total_open_count > 0 ? (
                         <button
-                          onClick={() => navigate(`/tickets?topic_name=${encodeURIComponent(topic.full_name)}&status=open`)}
+                          onClick={() => handleTicketFilter(topic.full_name, 'open')}
                           className='inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400 hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors'
                         >
                           {topic.total_open_count}
@@ -218,6 +239,30 @@ export default function TopicsPage() {
                         <span className='inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-400 dark:bg-gray-800 dark:text-gray-500'>
                           0
                         </span>
+                      )}
+                    </td>
+                    <td className='px-4 py-3 text-center'>
+                      {topic.total_resolved > 0 ? (
+                        <button
+                          onClick={() => handleTicketFilter(topic.full_name, 'resolved')}
+                          className='inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400 hover:bg-amber-200 transition-colors'
+                        >
+                          {topic.total_resolved}
+                        </button>
+                      ) : (
+                        <span className='inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-400 dark:bg-gray-800 dark:text-gray-500'>0</span>
+                      )}
+                    </td>
+                    <td className='px-4 py-3 text-center'>
+                      {topic.total_closed > 0 ? (
+                        <button
+                          onClick={() => handleTicketFilter(topic.full_name, 'closed')}
+                          className='inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400 hover:bg-gray-200 transition-colors'
+                        >
+                          {topic.total_closed}
+                        </button>
+                      ) : (
+                        <span className='inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-400 dark:bg-gray-800 dark:text-gray-500'>0</span>
                       )}
                     </td>
                     <td className='px-4 py-3 text-right'>
