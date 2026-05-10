@@ -1,6 +1,6 @@
 import EmptyState from '../common/EmptyState.jsx'
 import { useEffect, useRef } from 'react'
-import { Lock, MessageSquare, Reply } from 'lucide-react'
+import { Lock, MessageSquare, Reply, Paperclip } from 'lucide-react'
 import { formatDateTime } from '../../utils/formatters.js'
 
 const threadStyles = {
@@ -45,10 +45,36 @@ function ThreadEntry({ entry }) {
           {formatDateTime(entry.created)}
         </span>
       </div>
+      {entry.email?.from && (
+        <div className='mt-2 ml-6 pl-3 border-l-2 border-gray-200 dark:border-gray-700 text-xs text-gray-500 dark:text-gray-400 space-y-0.5 mb-2'>
+          {entry.email.from && <p>De: <span className='text-gray-700 dark:text-gray-300'>{entry.email.from}</span></p>}
+          {entry.email.to && <p>Para: <span className='text-gray-700 dark:text-gray-300'>{entry.email.to}</span></p>}
+          {entry.email.cc && <p>CC: <span className='text-gray-700 dark:text-gray-300'>{entry.email.cc}</span></p>}
+        </div>
+      )}
       <div
         className="prose prose-sm max-w-none dark:prose-invert text-gray-700 dark:text-gray-300"
         dangerouslySetInnerHTML={{ __html: entry.body }}
       />
+      {entry.attachments?.length > 0 && (
+        <div className='mt-3 pt-3 border-t border-gray-200 dark:border-gray-700'>
+          <div className='flex flex-wrap gap-2'>
+            {entry.attachments.map((att) => (
+              <a
+                key={att.id}
+                href={`/api/http.php/rest/files/${att.id}`}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-gray-50 dark:bg-gray-800 rounded-lg text-xs text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 transition-colors'
+              >
+                <Paperclip className='w-3.5 h-3.5' />
+                <span className='truncate max-w-[150px]'>{att.name || 'Archivo'}</span>
+                {att.size > 0 && <span className='text-gray-400'>{(att.size / 1024).toFixed(0)} KB</span>}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

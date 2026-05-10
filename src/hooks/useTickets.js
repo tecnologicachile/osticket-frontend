@@ -24,10 +24,11 @@ export function useTickets({
 }
 
 export function useTicket(id) {
+  const numId = Number(id)
   return useQuery({
-    queryKey: ['tickets', id],
-    queryFn: () => ticketsApi.getTicket(id),
-    enabled: !!id,
+    queryKey: ['tickets', numId],
+    queryFn: () => ticketsApi.getTicket(numId),
+    enabled: !!numId,
     select: (data) => data?.data || null,
   })
 }
@@ -53,8 +54,10 @@ export function useReplyTicket() {
   return useMutation({
     mutationFn: ({ id, data }) => ticketsApi.replyTicket(id, data),
     onSuccess: (_, { id }) => {
-      queryClient.invalidateQueries({ queryKey: ['tickets', id] })
-      queryClient.invalidateQueries({ queryKey: ['tickets'] })
+      setTimeout(() => {
+        queryClient.invalidateQueries({ queryKey: ['tickets', id] })
+        queryClient.invalidateQueries({ queryKey: ['tickets'] })
+      }, 500)
     },
   })
 }
@@ -64,7 +67,9 @@ export function useAddNote() {
   return useMutation({
     mutationFn: ({ id, data }) => ticketsApi.addNote(id, data),
     onSuccess: (_, { id }) => {
-      queryClient.invalidateQueries({ queryKey: ['tickets', id] })
+      setTimeout(() => {
+        queryClient.invalidateQueries({ queryKey: ['tickets', id] })
+      }, 500)
     },
   })
 }
@@ -74,8 +79,10 @@ export function useAssignTicket() {
   return useMutation({
     mutationFn: ({ id, agentId }) => ticketsApi.assignTicket(id, agentId),
     onSuccess: (_, { id }) => {
-      queryClient.invalidateQueries({ queryKey: ['tickets', id] })
-      queryClient.invalidateQueries({ queryKey: ['tickets'] })
+      setTimeout(() => {
+        queryClient.invalidateQueries({ queryKey: ['tickets', id] })
+        queryClient.invalidateQueries({ queryKey: ['tickets'] })
+      }, 500)
     },
   })
 }
@@ -85,8 +92,10 @@ export function useTransferTicket() {
   return useMutation({
     mutationFn: ({ id, departmentId }) => ticketsApi.transferTicket(id, departmentId),
     onSuccess: (_, { id }) => {
-      queryClient.invalidateQueries({ queryKey: ['tickets', id] })
-      queryClient.invalidateQueries({ queryKey: ['tickets'] })
+      setTimeout(() => {
+        queryClient.invalidateQueries({ queryKey: ['tickets', id] })
+        queryClient.invalidateQueries({ queryKey: ['tickets'] })
+      }, 500)
     },
   })
 }
@@ -96,8 +105,10 @@ export function useChangeStatus() {
   return useMutation({
     mutationFn: ({ id, status }) => ticketsApi.changeStatus(id, status),
     onSuccess: (_, { id }) => {
-      queryClient.invalidateQueries({ queryKey: ['tickets', id] })
-      queryClient.invalidateQueries({ queryKey: ['tickets'] })
+      setTimeout(() => {
+        queryClient.invalidateQueries({ queryKey: ['tickets', id] })
+        queryClient.invalidateQueries({ queryKey: ['tickets'] })
+      }, 500)
     },
   })
 }
@@ -107,8 +118,10 @@ export function useClaimTicket() {
   return useMutation({
     mutationFn: ticketsApi.claimTicket,
     onSuccess: (_, id) => {
-      queryClient.invalidateQueries({ queryKey: ['tickets', id] })
-      queryClient.invalidateQueries({ queryKey: ['tickets'] })
+      setTimeout(() => {
+        queryClient.invalidateQueries({ queryKey: ['tickets', id] })
+        queryClient.invalidateQueries({ queryKey: ['tickets'] })
+      }, 500)
     },
   })
 }
@@ -117,7 +130,9 @@ export function useMergeTickets() {
   const queryClient = useQueryClient()
   return useMutation({
     mutationFn: ({ targetId, sourceIds }) => ticketsApi.mergeTickets(targetId, sourceIds),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['tickets'] }),
+    onSuccess: () => {
+      setTimeout(() => queryClient.invalidateQueries({ queryKey: ['tickets'] }), 500)
+    },
   })
 }
 
@@ -125,6 +140,21 @@ export function useDeleteTicket() {
   const queryClient = useQueryClient()
   return useMutation({
     mutationFn: ticketsApi.deleteTicket,
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['tickets'] }),
+    onSuccess: () => {
+      setTimeout(() => queryClient.invalidateQueries({ queryKey: ['tickets'] }), 500)
+    },
+  })
+}
+
+export function useEditTicket() {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: ({ id, fields }) => ticketsApi.editTicket(id, fields),
+    onSuccess: (_, { id }) => {
+      setTimeout(() => {
+        queryClient.invalidateQueries({ queryKey: ['tickets', id] })
+        queryClient.invalidateQueries({ queryKey: ['tickets'] })
+      }, 500)
+    },
   })
 }

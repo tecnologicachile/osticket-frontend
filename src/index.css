@@ -79,11 +79,7 @@ video,
 }
 
 /* ── Focus ring ── */
-*:focus-visible {
-  outline: 2px solid #6366f1;
-  outline-offset: 2px;
-  border-radius: 4px;
-}
+/* Tailwind provides its own focus rings via focus:ring-* utilities */
 
 /* ── Selection ── */
 ::selection {
@@ -95,3 +91,66 @@ video,
   background: #3730a3;
   color: #e0e7ff;
 }
+
+/* ── TipTap Editor ── */
+.tiptap p.is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+.dark .tiptap p.is-editor-empty:first-child::before {
+  color: #6b7280;
+}
+
+.tiptap {
+  > * + * {
+    margin-top: 0.75em;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  ol {
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+  }
+  blockquote {
+    border-left: 3px solid #e5e7eb;
+    padding-left: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    font-style: italic;
+  }
+  .dark blockquote {
+    border-left-color: #4b5563;
+  }
+  pre {
+    background: #1f2937;
+    color: #f8f8f2;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    code {
+      color: inherit;
+      padding: 0;
+      background: none;
+      font-size: 0.875rem;
+    }
+  }
+  code {
+    background-color: #f3f4f6;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+  }
+  .dark code {
+    background-color: #374151;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+

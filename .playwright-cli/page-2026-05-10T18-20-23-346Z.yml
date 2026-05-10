@@ -1,0 +1,257 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: os
+      - generic [ref=e7]: osTicket
+    - navigation [ref=e8]:
+      - link "Tickets" [ref=e9] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e10]
+        - generic [ref=e13]: Tickets
+      - link "Estadísticas" [ref=e14] [cursor=pointer]:
+        - /url: /stats
+        - img [ref=e15]
+        - generic [ref=e17]: Estadísticas
+      - link "Temas" [ref=e18] [cursor=pointer]:
+        - /url: /topics
+        - img [ref=e19]
+        - generic [ref=e24]: Temas
+      - link "Búsqueda avanzada" [ref=e25] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e26]
+        - generic [ref=e29]: Búsqueda avanzada
+    - generic [ref=e31]:
+      - generic [ref=e33]: osTicket Portal
+      - generic [ref=e34]: v1.0
+  - generic [ref=e35]:
+    - banner [ref=e36]:
+      - heading "osTicket" [level=1] [ref=e38]
+      - generic [ref=e39]:
+        - button "Buscar tickets... ⌘K" [ref=e40]:
+          - img [ref=e41]
+          - generic [ref=e44]: Buscar tickets...
+          - generic [ref=e45]: ⌘K
+        - button "Activar modo oscuro" [ref=e46]:
+          - img [ref=e47]
+        - generic [ref=e49]:
+          - generic [ref=e51]: G
+          - generic [ref=e53]: Gustavo Quiero
+        - button "Cerrar sesión" [ref=e54]:
+          - img [ref=e55]
+    - main [ref=e58]:
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - link "Volver a tickets" [ref=e77] [cursor=pointer]:
+            - /url: /tickets
+            - img [ref=e78]
+            - text: Volver a tickets
+          - generic [ref=e80]:
+            - heading "TEST EDITOR - Prueba de editor enriquecido y adjuntos" [level=1] [ref=e81]
+            - generic [ref=e82]:
+              - generic [ref=e83]: Abierto
+              - button "Normal" [ref=e86]:
+                - generic [ref=e87] [cursor=pointer]:
+                  - img [ref=e88]
+                  - text: Normal
+          - generic [ref=e89]:
+            - generic [ref=e90]: "#989182"
+            - generic [ref=e91]: — Gustavo Quiero
+            - generic [ref=e92]:
+              - generic [ref=e93]: "|"
+              - text: Soporte
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - generic [ref=e97]:
+              - generic [ref=e98]:
+                - img [ref=e99]
+                - generic [ref=e101]: Gustavo Quiero
+                - generic [ref=e102]: 10 may 2026, 06:19 p. m.
+              - generic [ref=e103]:
+                - paragraph [ref=e104]: Hola equipo,
+                - paragraph [ref=e105]:
+                  - text: Este es un
+                  - strong [ref=e106]: test
+                  - text: del nuevo
+                  - emphasis [ref=e107]: editor enriquecido
+                  - text: para osTicket Frontend.
+                - list [ref=e108]:
+                  - listitem [ref=e109]: Probar negritas, cursivas, subrayado
+                  - listitem [ref=e110]: Probar pegado de imagenes desde portapapeles
+                  - listitem [ref=e111]: Probar notas internas con formato
+                - paragraph [ref=e112]:
+                  - text: Saludos,
+                  - text: Gustavo Quiero
+            - generic [ref=e114]:
+              - heading "Enviar respuesta" [level=3] [ref=e115]:
+                - img [ref=e116]
+                - text: Enviar respuesta
+              - generic [ref=e119]:
+                - generic [ref=e120]:
+                  - button "Bold" [ref=e121]:
+                    - img [ref=e122]
+                  - button "Italic" [ref=e124]:
+                    - img [ref=e125]
+                  - button "Underline" [ref=e127]:
+                    - img [ref=e128]
+                  - button "Strike" [ref=e130]:
+                    - img [ref=e131]
+                  - button "Link" [ref=e135]:
+                    - img [ref=e136]
+                  - button "Bullet List" [ref=e140]:
+                    - img [ref=e141]
+                  - button "Ordered List" [ref=e142]:
+                    - img [ref=e143]
+                  - button "Blockquote" [ref=e146]:
+                    - img [ref=e147]
+                  - button "Code Block" [ref=e150]:
+                    - img [ref=e151]
+                  - button "Image" [ref=e155]:
+                    - img [ref=e156]
+                  - button "Table" [ref=e160]:
+                    - img [ref=e161]
+                  - button "Align Left" [ref=e164]:
+                    - img [ref=e165]
+                  - button "Align Center" [ref=e166]:
+                    - img [ref=e167]
+                  - button "Align Right" [ref=e168]:
+                    - img [ref=e169]
+                  - generic [ref=e171]:
+                    - button "Text Color" [ref=e172]:
+                      - img [ref=e173]
+                    - textbox "Text Color" [ref=e179] [cursor=pointer]: "#000000"
+                  - generic [ref=e180]:
+                    - button "Highlight" [ref=e181]:
+                      - img [ref=e182]
+                    - textbox "Highlight Color" [ref=e185] [cursor=pointer]: "#000000"
+                  - button "Undo" [disabled] [ref=e187]:
+                    - img [ref=e188]
+                  - button "Redo" [disabled] [ref=e191]:
+                    - img [ref=e192]
+                - paragraph [ref=e198]: Escribe tu respuesta...
+              - generic [ref=e199]:
+                - generic [ref=e200]:
+                  - generic [ref=e201]: "Estado tras respuesta:"
+                  - combobox "Estado tras respuesta:" [ref=e202]:
+                    - option "Sin cambio" [selected]
+                    - option "Abierto"
+                    - option "Resuelto"
+                    - option "Cerrado"
+                - button "Enviar respuesta" [disabled] [ref=e203]:
+                  - img [ref=e204]
+                  - text: Enviar respuesta
+            - generic [ref=e207]:
+              - heading "Agregar nota interna" [level=3] [ref=e208]:
+                - img [ref=e209]
+                - text: Agregar nota interna
+              - textbox "Título de la nota (opcional)" [ref=e212]
+              - generic [ref=e213]:
+                - generic [ref=e214]:
+                  - button "Bold" [ref=e215]:
+                    - img [ref=e216]
+                  - button "Italic" [ref=e218]:
+                    - img [ref=e219]
+                  - button "Underline" [ref=e221]:
+                    - img [ref=e222]
+                  - button "Strike" [ref=e224]:
+                    - img [ref=e225]
+                  - button "Link" [ref=e229]:
+                    - img [ref=e230]
+                  - button "Bullet List" [ref=e234]:
+                    - img [ref=e235]
+                  - button "Ordered List" [ref=e236]:
+                    - img [ref=e237]
+                  - button "Blockquote" [ref=e240]:
+                    - img [ref=e241]
+                  - button "Code Block" [ref=e244]:
+                    - img [ref=e245]
+                  - button "Image" [ref=e249]:
+                    - img [ref=e250]
+                  - button "Table" [ref=e254]:
+                    - img [ref=e255]
+                  - button "Align Left" [ref=e258]:
+                    - img [ref=e259]
+                  - button "Align Center" [ref=e260]:
+                    - img [ref=e261]
+                  - button "Align Right" [ref=e262]:
+                    - img [ref=e263]
+                  - generic [ref=e265]:
+                    - button "Text Color" [ref=e266]:
+                      - img [ref=e267]
+                    - textbox "Text Color" [ref=e273] [cursor=pointer]: "#000000"
+                  - generic [ref=e274]:
+                    - button "Highlight" [ref=e275]:
+                      - img [ref=e276]
+                    - textbox "Highlight Color" [ref=e279] [cursor=pointer]: "#000000"
+                  - button "Undo" [disabled] [ref=e281]:
+                    - img [ref=e282]
+                  - button "Redo" [disabled] [ref=e285]:
+                    - img [ref=e286]
+                - paragraph [ref=e292]: Escribe tu respuesta...
+              - button "Agregar nota" [disabled] [ref=e294]:
+                - img [ref=e295]
+                - text: Agregar nota
+          - generic [ref=e299]:
+            - generic [ref=e300]:
+              - heading "Información" [level=4] [ref=e301]:
+                - img [ref=e302]
+                - text: Información
+              - generic [ref=e305]:
+                - generic [ref=e306]:
+                  - term [ref=e307]: ID
+                  - definition [ref=e308]: "#989182"
+                - generic [ref=e309]:
+                  - term [ref=e310]: Fuente
+                  - definition [ref=e311]: Email
+                - generic [ref=e312]:
+                  - term [ref=e313]: Creado
+                  - definition [ref=e314]: 10 may 2026, 06:19 p. m.
+                - generic [ref=e315]:
+                  - term [ref=e316]: Actualizado
+                  - definition [ref=e317]: 10 may 2026, 06:19 p. m.
+            - generic [ref=e318]:
+              - heading "Asignar" [level=4] [ref=e319]:
+                - img [ref=e320]
+                - text: Asignar
+              - generic [ref=e323]:
+                - combobox [ref=e324]:
+                  - option "Seleccionar agente…" [selected]
+                  - option "Felipe Melo"
+                  - option "Gustavo Quiero"
+                  - option "Mariano Melo"
+                - button "Asignar" [disabled] [ref=e325]
+            - generic [ref=e326]:
+              - heading "Cambiar estado" [level=4] [ref=e327]:
+                - img [ref=e328]
+                - text: Cambiar estado
+              - paragraph [ref=e330]: "Actual: Abierto"
+              - generic [ref=e331]:
+                - combobox [ref=e332]:
+                  - option "Seleccionar…" [selected]
+                  - option "Abierto"
+                  - option "Resuelto"
+                  - option "Cerrado"
+                - button "Cambiar" [disabled] [ref=e333]
+            - generic [ref=e334]:
+              - heading "Transferir" [level=4] [ref=e335]:
+                - img [ref=e336]
+                - text: Transferir
+              - generic [ref=e339]:
+                - combobox [ref=e340]:
+                  - option "Seleccionar depto…" [selected]
+                  - option "Contacto"
+                  - option "Gustavo"
+                  - option "Mantenimiento"
+                  - option "Soporte"
+                  - option "Ventas"
+                - button "Mover" [disabled] [ref=e341]
+            - generic [ref=e342]:
+              - heading "Asignarme" [level=4] [ref=e343]:
+                - img [ref=e344]
+                - text: Asignarme
+              - button "Asignarme este ticket" [ref=e348]
+            - generic [ref=e349]:
+              - heading "Fusionar tickets" [level=4] [ref=e350]:
+                - img [ref=e351]
+                - text: Fusionar tickets
+              - 'textbox "IDs separados por coma (ej: 42, 57)" [ref=e355]'
+              - button "Fusionar en este ticket" [disabled] [ref=e356]

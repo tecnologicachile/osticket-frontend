@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Search, Loader2 } from 'lucide-react'
 import { searchTickets } from '../../api/tickets.js'
+import { STATUS_MAP } from '../../utils/constants.js'
 
 export default function GlobalSearch({ open, onClose }) {
   const [query, setQuery] = useState('')
@@ -90,12 +91,12 @@ export default function GlobalSearch({ open, onClose }) {
       {/* Modal */}
       <div className="relative w-full max-w-lg bg-white dark:bg-slate-900 rounded-xl shadow-2xl ring-1 ring-black/5 dark:ring-white/10 overflow-hidden mx-4">
         {/* Search Input */}
-        <div className="flex items-center px-4 border-b border-slate-200 dark:border-slate-800">
+        <div className="flex items-center px-4 border-b border-slate-200 dark:border-slate-800 no-focus-ring">
           <Search className="w-5 h-5 text-slate-400" />
           <input
             ref={inputRef}
             type="text"
-            className="flex-1 px-4 py-4 bg-transparent outline-none text-slate-900 dark:text-white placeholder:text-slate-400"
+            className="flex-1 px-4 py-4 bg-transparent no-focus-ring text-slate-900 dark:text-white placeholder:text-slate-400"
             placeholder="Buscar tickets... (Ctrl+K)"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -129,7 +130,7 @@ export default function GlobalSearch({ open, onClose }) {
                           #{ticket.number || ticket.id} - {ticket.subject}
                         </span>
                         <span className="shrink-0 text-xs px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
-                          {ticket.status}
+                          {STATUS_MAP[ticket.status]?.label || ticket.status}
                         </span>
                       </div>
                       <div className="text-sm text-slate-500 dark:text-slate-400">

@@ -8,7 +8,7 @@ import {
   createColumnHelper,
 } from '@tanstack/react-table'
 import { ChevronLeft, ChevronRight, Ticket, UserCheck, Flag, MessageSquare, MoreHorizontal, CheckCircle2, Trash2, ArrowUp, ArrowDown } from 'lucide-react'
-import { useTickets, useClaimTicket, useChangeStatus, useDeleteTicket } from '../hooks/useTickets.js'
+import { useTickets, useClaimTicket, useChangeStatus, useDeleteTicket, useEditTicket } from '../hooks/useTickets.js'
 import { useBulkActions } from '../hooks/useBulkActions.js'
 import toast from 'react-hot-toast'
 
@@ -21,6 +21,7 @@ import TicketFilters from '../components/tickets/TicketFilters.jsx'
 import BulkActionsBar from '../components/tickets/BulkActionsBar.jsx'
 import QuickReplyDrawer from '../components/tickets/QuickReplyDrawer.jsx'
 import HoverPreview from '../components/common/HoverPreview.jsx'
+import { useAuth } from '../stores/auth.jsx'
 
 const columnHelper = createColumnHelper()
 
@@ -28,6 +29,7 @@ export default function TicketsPage() {
   const navigate = useNavigate()
   const [searchParams, setSearchParams] = useSearchParams()
   const lastClickedRef = useRef(null)
+  const { staffId } = useAuth()
 
   const [replyTicketId, setReplyTicketId] = useState(null)
   const [openDropdownId, setOpenDropdownId] = useState(null)
@@ -35,13 +37,14 @@ export default function TicketsPage() {
   const claimMutation = useClaimTicket()
   const changeStatusMutation = useChangeStatus()
   const deleteMutation = useDeleteTicket()
+  const editMutation = useEditTicket()
 
   // Read filters from URL
   const page = Number(searchParams.get('page') || 1)
   const queue = searchParams.get('queue') || 'my'
   const status = searchParams.get('status') || undefined
   const dept_id = searchParams.get('dept_id') || undefined
-  const agent_id = searchParams.get('agent_id') || undefined
+  const agent_id = searchParams.get('agent_id') || (queue === 'my' ? staffId : undefined)
   const priority = searchParams.get('priority') || undefined
   const date_from = searchParams.get('date_from') || undefined
   const date_to = searchParams.get('date_to') || undefined
@@ -156,6 +159,15 @@ export default function TicketsPage() {
       toast.success('Ticket eliminado')
     } catch (err) {
       toast.error('Error al eliminar')
+    }
+  }
+
+  const handlePriorityChange = async (id, priority) => {
+    try {
+      await editMutation.mutateAsync({ id, fields: { priority: String(priority) } })
+      toast.success('Prioridad actualizada')
+    } catch (err) {
+      toast.error('Error al cambiar prioridad')
     }
   }
 
@@ -285,7 +297,7 @@ export default function TicketsPage() {
         },
         size: 130,
       }),
-      columnHelper.accessor((row) => ({ status: row.status, priority: row.priority }), {
+      columnHelper.accessor((row) => ({ status: row.status, priority: row.priority, tid: row.id }), {
         id: 'clasificacion',
         enableSorting: true,
         sortingFn: 'text',
@@ -296,11 +308,11 @@ export default function TicketsPage() {
           </button>
         ),
         cell: ({ getValue }) => {
-          const { status, priority } = getValue()
+          const { status, priority, tid } = getValue()
           return (
             <div className='flex flex-col gap-1 items-start'>
               <StatusBadge status={status} />
-              <PriorityBadge priority={priority} />
+              <PriorityBadge priority={priority} onChange={(v) => handlePriorityChange(tid, v)} />
             </div>
           )
         },

@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
-import { useTicket } from '../hooks/useTickets.js'
+import toast from 'react-hot-toast'
+import { useTicket, useEditTicket } from '../hooks/useTickets.js'
 import StatusBadge from '../components/common/StatusBadge.jsx'
 import PriorityBadge from '../components/common/PriorityBadge.jsx'
 import TicketThread from '../components/tickets/TicketThread.jsx'
@@ -34,6 +35,16 @@ function DetailSkeleton() {
 export default function TicketDetailPage() {
   const { id } = useParams()
   const { data: ticket, isLoading, isError, error } = useTicket(id)
+  const editMutation = useEditTicket()
+
+  const handlePriorityChange = async (priority) => {
+    try {
+      await editMutation.mutateAsync({ id: Number(id), fields: { priority: String(priority) } })
+      toast.success('Prioridad actualizada')
+    } catch (err) {
+      toast.error('Error al cambiar prioridad')
+    }
+  }
 
   // ---- Loading ----
   if (isLoading) {
@@ -97,7 +108,7 @@ export default function TicketDetailPage() {
           </h1>
           <div className="flex items-center gap-1.5">
             <StatusBadge status={ticket.status} />
-            {ticket.priority != null && <PriorityBadge priority={ticket.priority} />}
+            {ticket.priority != null && <PriorityBadge priority={ticket.priority} onChange={handlePriorityChange} />}
           </div>
         </div>
 

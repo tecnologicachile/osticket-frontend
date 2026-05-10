@@ -1,0 +1,194 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: os
+      - generic [ref=e7]: osTicket
+    - navigation [ref=e8]:
+      - link "Tickets" [ref=e9] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e10]
+        - generic [ref=e13]: Tickets
+      - link "Estadísticas" [ref=e14] [cursor=pointer]:
+        - /url: /stats
+        - img [ref=e15]
+        - generic [ref=e17]: Estadísticas
+      - link "Temas" [ref=e18] [cursor=pointer]:
+        - /url: /topics
+        - img [ref=e19]
+        - generic [ref=e24]: Temas
+      - link "Búsqueda avanzada" [ref=e25] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e26]
+        - generic [ref=e29]: Búsqueda avanzada
+    - generic [ref=e31]:
+      - generic [ref=e33]: osTicket Portal
+      - generic [ref=e34]: v1.0
+  - generic [ref=e35]:
+    - banner [ref=e36]:
+      - heading "Tickets" [level=1] [ref=e38]
+      - generic [ref=e39]:
+        - button "Buscar tickets... ⌘K" [ref=e40]:
+          - img [ref=e41]
+          - generic [ref=e44]: Buscar tickets...
+          - generic [ref=e45]: ⌘K
+        - button "Activar modo oscuro" [ref=e46]:
+          - img [ref=e47]
+        - generic [ref=e49]:
+          - generic [ref=e51]: M
+          - generic [ref=e53]: Agente
+        - button "Cerrar sesión" [ref=e54]:
+          - img [ref=e55]
+    - main [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - generic [ref=e61]:
+            - img [ref=e62]
+            - generic [ref=e64]: Filtros
+          - generic [ref=e65]:
+            - generic [ref=e66]:
+              - generic [ref=e67]: Estado
+              - combobox [ref=e68]:
+                - option "Todos" [selected]
+                - option "Abierto"
+                - option "Resuelto"
+                - option "Cerrado"
+            - generic [ref=e69]:
+              - generic [ref=e70]: Departamento
+              - combobox [ref=e71]:
+                - option "Todos" [selected]
+            - generic [ref=e72]:
+              - generic [ref=e73]: Agente
+              - combobox [ref=e74]:
+                - option "Todos" [selected]
+            - generic [ref=e75]:
+              - generic [ref=e76]: Prioridad
+              - combobox [ref=e77]:
+                - option "Todas" [selected]
+                - option "Baja"
+                - option "Normal"
+                - option "Alta"
+                - option "Emergencia"
+            - generic [ref=e78]:
+              - generic [ref=e79]: Tema
+              - combobox [ref=e80]:
+                - option "Todos" [selected]
+            - generic [ref=e81]:
+              - generic [ref=e82]: Desde
+              - textbox [ref=e83]
+            - generic [ref=e84]:
+              - generic [ref=e85]: Hasta
+              - textbox [ref=e86]
+            - generic [ref=e87]:
+              - generic [ref=e88]:
+                - generic [ref=e89]: Cola
+                - combobox [ref=e90]:
+                  - option "Abiertos" [selected]
+                  - option "Mis tickets"
+                  - option "Cerrados"
+              - generic [ref=e91] [cursor=pointer]:
+                - checkbox "Solo vencidos" [ref=e92]
+                - generic [ref=e93]: Solo vencidos
+        - table [ref=e96]:
+          - rowgroup [ref=e97]:
+            - row "Solicitud Tiempo Asignación Estado Tema" [ref=e98]:
+              - columnheader [ref=e99]:
+                - checkbox [ref=e101]
+              - columnheader "Solicitud" [ref=e102]
+              - columnheader "Tiempo" [ref=e103]:
+                - button "Tiempo" [ref=e104]:
+                  - text: Tiempo
+                  - img [ref=e105]
+              - columnheader "Asignación" [ref=e107]
+              - columnheader "Estado" [ref=e108]:
+                - button "Estado" [ref=e109]
+              - columnheader "Tema" [ref=e110]
+              - columnheader [ref=e111]
+          - rowgroup [ref=e112]:
+            - row [ref=e113]:
+              - cell [ref=e114]
+              - cell [ref=e116]
+              - cell [ref=e118]
+              - cell [ref=e120]
+              - cell [ref=e122]
+              - cell [ref=e124]
+              - cell [ref=e126]
+              - cell [ref=e128]
+              - cell [ref=e130]
+              - cell [ref=e132]
+            - row [ref=e134]:
+              - cell [ref=e135]
+              - cell [ref=e137]
+              - cell [ref=e139]
+              - cell [ref=e141]
+              - cell [ref=e143]
+              - cell [ref=e145]
+              - cell [ref=e147]
+              - cell [ref=e149]
+              - cell [ref=e151]
+              - cell [ref=e153]
+            - row [ref=e155]:
+              - cell [ref=e156]
+              - cell [ref=e158]
+              - cell [ref=e160]
+              - cell [ref=e162]
+              - cell [ref=e164]
+              - cell [ref=e166]
+              - cell [ref=e168]
+              - cell [ref=e170]
+              - cell [ref=e172]
+              - cell [ref=e174]
+            - row [ref=e176]:
+              - cell [ref=e177]
+              - cell [ref=e179]
+              - cell [ref=e181]
+              - cell [ref=e183]
+              - cell [ref=e185]
+              - cell [ref=e187]
+              - cell [ref=e189]
+              - cell [ref=e191]
+              - cell [ref=e193]
+              - cell [ref=e195]
+            - row [ref=e197]:
+              - cell [ref=e198]
+              - cell [ref=e200]
+              - cell [ref=e202]
+              - cell [ref=e204]
+              - cell [ref=e206]
+              - cell [ref=e208]
+              - cell [ref=e210]
+              - cell [ref=e212]
+              - cell [ref=e214]
+              - cell [ref=e216]
+            - row [ref=e218]:
+              - cell [ref=e219]
+              - cell [ref=e221]
+              - cell [ref=e223]
+              - cell [ref=e225]
+              - cell [ref=e227]
+              - cell [ref=e229]
+              - cell [ref=e231]
+              - cell [ref=e233]
+              - cell [ref=e235]
+              - cell [ref=e237]
+            - row [ref=e239]:
+              - cell [ref=e240]
+              - cell [ref=e242]
+              - cell [ref=e244]
+              - cell [ref=e246]
+              - cell [ref=e248]
+              - cell [ref=e250]
+              - cell [ref=e252]
+              - cell [ref=e254]
+              - cell [ref=e256]
+              - cell [ref=e258]
+            - row [ref=e260]:
+              - cell [ref=e261]
+              - cell [ref=e263]
+              - cell [ref=e265]
+              - cell [ref=e267]
+              - cell [ref=e269]
+              - cell [ref=e271]
+              - cell [ref=e273]
+              - cell [ref=e275]
+              - cell [ref=e277]
+              - cell [ref=e279]

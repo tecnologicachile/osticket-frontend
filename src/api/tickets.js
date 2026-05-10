@@ -58,7 +58,7 @@ export function replyTicket(id, data) {
 }
 
 export function addNote(id, data) {
-  return apiRequest(`/tickets/${id}/notes`, {
+  return apiRequest(`/tickets/${id}/note`, {
     method: 'POST',
     body: JSON.stringify(data),
   })
@@ -101,6 +101,13 @@ export function mergeTickets(targetId, sourceIds) {
 export function deleteTicket(id) {
   return apiRequest(`/tickets/${id}`, {
     method: 'DELETE',
+  })
+}
+
+export function editTicket(id, fields) {
+  return apiRequest(`/tickets/${id}/edit`, {
+    method: 'POST',
+    body: JSON.stringify({ fields }),
   })
 }
 

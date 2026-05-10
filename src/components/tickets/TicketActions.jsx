@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import {
   UserPlus,
   UserCheck,
@@ -6,6 +7,9 @@ import {
   Flag,
   GitMerge,
   User,
+  Users,
+  Plus,
+  X,
 } from 'lucide-react'
 import toast from 'react-hot-toast'
 import {
@@ -19,6 +23,7 @@ import { useAgents } from '../../hooks/useAgents.js'
 import { useDepartments } from '../../hooks/useDepartments.js'
 import { STATUS_MAP } from '../../utils/constants.js'
 import { formatDateTime } from '../../utils/formatters.js'
+import apiRequest from '../../api/client.js'
 
 function ActionBox({ icon: Icon, title, children }) {
   return (
@@ -256,6 +261,107 @@ function MergeAction({ ticketId }) {
   )
 }
 
+function CollaboratorAction({ ticketId }) {
+  const queryClient = useQueryClient()
+  const [searchUser, setSearchUser] = useState('')
+  const [showSearch, setShowSearch] = useState(false)
+
+  const { data: collabData } = useQuery({
+    queryKey: ['collaborators', ticketId],
+    queryFn: () => apiRequest('/tickets/' + ticketId + '/collaborators'),
+    staleTime: 30000,
+  })
+  const collaborators = collabData?.data || []
+
+  const addMutation = useMutation({
+    mutationFn: (userId) => apiRequest('/tickets/' + ticketId + '/collaborators', {
+      method: 'POST',
+      body: JSON.stringify({ user_id: userId }),
+    }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['collaborators', ticketId] })
+      toast.success('Colaborador agregado')
+    },
+    onError: (err) => toast.error(err.message || 'Error al agregar'),
+  })
+
+  const removeMutation = useMutation({
+    mutationFn: (userId) => apiRequest('/tickets/' + ticketId + '/collaborators/' + userId, {
+      method: 'DELETE',
+    }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['collaborators', ticketId] })
+      toast.success('Colaborador removido')
+    },
+    onError: (err) => toast.error(err.message || 'Error al remover'),
+  })
+
+  // Search users when typing
+  const { data: userResults = [] } = useQuery({
+    queryKey: ['userSearch', searchUser],
+    queryFn: () => apiRequest('/users/search?q=' + encodeURIComponent(searchUser)),
+    enabled: searchUser.length >= 3,
+    select: (d) => d?.data || [],
+    staleTime: 30000,
+  })
+
+  return (
+    <ActionBox icon={Users} title='Colaboradores (CC)'>
+      {/* Current collaborators */}
+      {collaborators.length > 0 ? (
+        <div className='space-y-1 mb-2'>
+          {collaborators.map((c) => (
+            <div key={c.id || c.user_id} className='flex items-center justify-between text-xs'>
+              <span className='text-gray-700 dark:text-gray-300 truncate'>{c.name || c.email}</span>
+              <button
+                onClick={() => removeMutation.mutate(c.user_id || c.id)}
+                className='p-0.5 text-gray-400 hover:text-red-500'
+              ><X className='w-3 h-3' /></button>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p className='text-xs text-gray-400 mb-2'>Sin colaboradores</p>
+      )}
+
+      {/* Add collaborator */}
+      {showSearch ? (
+        <div className='space-y-1'>
+          <input
+            type='text'
+            value={searchUser}
+            onChange={(e) => setSearchUser(e.target.value)}
+            placeholder='Buscar usuario por nombre/email...'
+            className='w-full text-xs rounded border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 px-2 py-1.5'
+            autoFocus
+          />
+          {userResults.length > 0 && (
+            <div className='max-h-24 overflow-y-auto border border-gray-200 dark:border-gray-700 rounded'>
+              {userResults.map((u) => (
+                <button
+                  key={u.id}
+                  onClick={() => { addMutation.mutate(u.id); setShowSearch(false); setSearchUser('') }}
+                  className='w-full text-left px-2 py-1 text-xs text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                >
+                  {u.name || u.email} {u.email && u.name && <span className='text-gray-400'>({u.email})</span>}
+                </button>
+              ))}
+            </div>
+          )}
+          <button onClick={() => setShowSearch(false)} className='text-xs text-gray-500 hover:text-gray-700'>Cancelar</button>
+        </div>
+      ) : (
+        <button
+          onClick={() => setShowSearch(true)}
+          className='flex items-center gap-1 text-xs text-blue-600 hover:text-blue-700'
+        >
+          <Plus className='w-3 h-3' /> Agregar colaborador
+        </button>
+      )}
+    </ActionBox>
+  )
+}
+
 export default function TicketActions({ ticket }) {
   if (!ticket) return null
 
@@ -303,6 +409,7 @@ export default function TicketActions({ ticket }) {
       <TransferAction ticketId={ticket.id} />
       <ClaimAction ticketId={ticket.id} hasAssignee={!!(ticket.assignee || ticket.assigned_to)} />
       <MergeAction ticketId={ticket.id} />
+      <CollaboratorAction ticketId={ticket.id} />
     </div>
   )
 }

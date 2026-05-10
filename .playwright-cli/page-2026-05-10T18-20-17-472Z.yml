@@ -1,0 +1,41 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: os
+      - generic [ref=e7]: osTicket
+    - navigation [ref=e8]:
+      - link "Tickets" [ref=e9] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e10]
+        - generic [ref=e13]: Tickets
+      - link "Estadísticas" [ref=e14] [cursor=pointer]:
+        - /url: /stats
+        - img [ref=e15]
+        - generic [ref=e17]: Estadísticas
+      - link "Temas" [ref=e18] [cursor=pointer]:
+        - /url: /topics
+        - img [ref=e19]
+        - generic [ref=e24]: Temas
+      - link "Búsqueda avanzada" [ref=e25] [cursor=pointer]:
+        - /url: /tickets
+        - img [ref=e26]
+        - generic [ref=e29]: Búsqueda avanzada
+    - generic [ref=e31]:
+      - generic [ref=e33]: osTicket Portal
+      - generic [ref=e34]: v1.0
+  - generic [ref=e35]:
+    - banner [ref=e36]:
+      - heading "osTicket" [level=1] [ref=e38]
+      - generic [ref=e39]:
+        - button "Buscar tickets... ⌘K" [ref=e40]:
+          - img [ref=e41]
+          - generic [ref=e44]: Buscar tickets...
+          - generic [ref=e45]: ⌘K
+        - button "Activar modo oscuro" [ref=e46]:
+          - img [ref=e47]
+        - generic [ref=e49]:
+          - generic [ref=e51]: G
+          - generic [ref=e53]: Gustavo Quiero
+        - button "Cerrar sesión" [ref=e54]:
+          - img [ref=e55]
+    - main [ref=e58]
