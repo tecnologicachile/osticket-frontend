@@ -66,7 +66,7 @@ export default function TicketFilters() {
     })
   }, [setSearchParams])
 
-  const hasFilters = get('status') || get('dept_id') || get('agent_id') || get('priority') || get('date_from') || get('date_to') || get('overdue') || get('q')
+  const hasFilters = get('status') || get('dept_id') || get('agent_id') || get('priority') || get('date_from') || get('date_to') || get('overdue') || get('topic_name') || get('q')
 
   return (
     <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-3 lg:p-4 mb-4">
