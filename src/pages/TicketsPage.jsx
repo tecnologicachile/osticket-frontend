@@ -52,7 +52,7 @@ export default function TicketsPage() {
   const overdue = searchParams.get('overdue') === '1' || undefined
   const topic_name = searchParams.get('topic_name') || undefined
   const sort_by = searchParams.get('sort_by') || 'created'
-  const sort_dir = searchParams.get('sort_dir') || 'ASC'
+  const sort_dir = searchParams.get('sort_dir') || 'DESC'
 
   const { data, isLoading, isError, error } = useTickets({
     queue,
