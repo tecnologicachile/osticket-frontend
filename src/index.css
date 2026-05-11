@@ -160,6 +160,7 @@ video,
 .thread-body {
   color: #111827;
   word-wrap: break-word;
+  font-weight: 500;
 }
 .dark .thread-body { color: #f3f4f6; }
 .thread-body p { margin-bottom: 0.75em; }
