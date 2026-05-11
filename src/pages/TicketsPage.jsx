@@ -41,16 +41,16 @@ export default function TicketsPage() {
 
   // Read filters from URL
   const page = Number(searchParams.get('page') || 1)
-  const queue = searchParams.get('queue') || 'my'
-  const status = searchParams.get('status') || undefined
+  const q = searchParams.get('q') || undefined
+  const queue = searchParams.get('queue') || (q ? 'open' : 'my')
+  const status = searchParams.get('status') || (q ? 'all' : undefined)
   const dept_id = searchParams.get('dept_id') || undefined
-  const agent_id = searchParams.get('agent_id') || (queue === 'my' ? staffId : undefined)
+  const agent_id = searchParams.get('agent_id') || (queue === 'my' && !q ? staffId : undefined)
   const priority = searchParams.get('priority') || undefined
   const date_from = searchParams.get('date_from') || undefined
   const date_to = searchParams.get('date_to') || undefined
   const overdue = searchParams.get('overdue') === '1' || undefined
   const topic_name = searchParams.get('topic_name') || undefined
-  const q = searchParams.get('q') || undefined
   const sort_by = searchParams.get('sort_by') || 'created'
   const sort_dir = searchParams.get('sort_dir') || 'ASC'
 
