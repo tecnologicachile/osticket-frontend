@@ -97,7 +97,7 @@ export default function Sidebar({ mobileOpen, onMobileClose }) {
                   {groupedTopics.map(t => (
                     <NavLink
                       key={t.id}
-                      to={`/tickets?topic_name=${encodeURIComponent(t.full_name)}&status=open`}
+                      to={`/tickets?topic_name=${encodeURIComponent(t.full_name)}&status=open&queue=open`}
                       onClick={onMobileClose}
                       className={({ isActive }) =>
                         `flex items-center gap-2 px-3 py-1.5 rounded-lg transition-all duration-200 text-xs ${
