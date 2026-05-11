@@ -14,6 +14,7 @@ export function listTickets({
   topic_name,
   sort_by,
   sort_dir,
+  q,
 } = {}) {
   const params = new URLSearchParams()
   params.set('queue', queue)
@@ -29,6 +30,7 @@ export function listTickets({
   if (topic_name) params.set('topic_name', topic_name)
   if (sort_by) params.set('sort_by', sort_by)
   if (sort_dir) params.set('sort_dir', sort_dir)
+  if (q) params.set('q', q)
   return apiRequest(`/tickets?${params.toString()}`)
 }
 
@@ -67,7 +69,7 @@ export function addNote(id, data) {
 export function assignTicket(id, agentId) {
   return apiRequest(`/tickets/${id}/assign`, {
     method: 'POST',
-    body: JSON.stringify({ agent_id: agentId }),
+    body: JSON.stringify({ assignee: 's' + String(agentId) }),
   })
 }
 
@@ -121,7 +123,7 @@ export function bulkStatus(ticketIds, status) {
 export function bulkAssign(ticketIds, agentId) {
   return apiRequest('/tickets/bulk/assign', {
     method: 'POST',
-    body: JSON.stringify({ ids: ticketIds, agent_id: agentId }),
+    body: JSON.stringify({ ticket_ids: ticketIds, assignee: 's' + String(agentId) }),
   })
 }
 

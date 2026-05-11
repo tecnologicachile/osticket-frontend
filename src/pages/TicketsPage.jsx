@@ -50,6 +50,7 @@ export default function TicketsPage() {
   const date_to = searchParams.get('date_to') || undefined
   const overdue = searchParams.get('overdue') === '1' || undefined
   const topic_name = searchParams.get('topic_name') || undefined
+  const q = searchParams.get('q') || undefined
   const sort_by = searchParams.get('sort_by') || 'created'
   const sort_dir = searchParams.get('sort_dir') || 'ASC'
 
@@ -65,6 +66,7 @@ export default function TicketsPage() {
     date_to,
     overdue,
     topic_name,
+    q,
     sort_by,
     sort_dir,
   })

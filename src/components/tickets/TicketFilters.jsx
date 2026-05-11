@@ -1,10 +1,10 @@
 import { useSearchParams } from 'react-router-dom'
-import { useCallback } from 'react'
+import { useCallback, useState, useEffect } from 'react'
 import { useAgents } from '../../hooks/useAgents.js'
 import { useDepartments } from '../../hooks/useDepartments.js'
 import { useTopics } from '../../hooks/useTopics.js'
 import { PRIORITY_MAP } from '../../utils/constants.js'
-import { Filter, X } from 'lucide-react'
+import { Filter, X, Search } from 'lucide-react'
 
 const STATUS_OPTIONS = [
   { value: '', label: 'Todos' },
@@ -26,6 +26,15 @@ export default function TicketFilters() {
 
   const get = (key) => searchParams.get(key) || ''
 
+  const [searchQuery, setSearchQuery] = useState(() => get('q'))
+
+  useEffect(() => {
+    const q = get('q')
+    if (q !== searchQuery) {
+      setSearchQuery(q)
+    }
+  }, [searchParams])
+
   const setParam = useCallback((key, value) => {
     setSearchParams((prev) => {
       const next = new URLSearchParams(prev)
@@ -41,6 +50,13 @@ export default function TicketFilters() {
     })
   }, [setSearchParams])
 
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setParam('q', searchQuery)
+    }, 400)
+    return () => clearTimeout(handler)
+  }, [searchQuery, setParam])
+
   const clearFilters = useCallback(() => {
     setSearchParams((prev) => {
       const next = new URLSearchParams()
@@ -50,7 +66,7 @@ export default function TicketFilters() {
     })
   }, [setSearchParams])
 
-  const hasFilters = get('status') || get('dept_id') || get('agent_id') || get('priority') || get('date_from') || get('date_to') || get('overdue')
+  const hasFilters = get('status') || get('dept_id') || get('agent_id') || get('priority') || get('date_from') || get('date_to') || get('overdue') || get('q')
 
   return (
     <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-3 lg:p-4 mb-4">
@@ -68,6 +84,33 @@ export default function TicketFilters() {
         )}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        {/* Search */}
+        <div className="col-span-1 sm:col-span-2 lg:col-span-4">
+          <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
+            Buscar
+          </label>
+          <div className="relative">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <Search className="h-4 w-4 text-gray-400" />
+            </div>
+            <input
+              type="text"
+              placeholder="Buscar por número, asunto o contenido..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-9 pr-8 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-700 dark:text-gray-200 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
+          </div>
+        </div>
+
         {/* Status */}
         <div>
           <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">

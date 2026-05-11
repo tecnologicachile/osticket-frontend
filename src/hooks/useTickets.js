@@ -15,8 +15,9 @@ export function useTickets({
   topic_name,
   sort_by,
   sort_dir,
+  q,
 } = {}) {
-  const params = { queue, page, limit, status, dept_id, agent_id, priority, date_from, date_to, overdue, topic_name, sort_by, sort_dir }
+  const params = { queue, page, limit, status, dept_id, agent_id, priority, date_from, date_to, overdue, topic_name, sort_by, sort_dir, q }
   return useQuery({
     queryKey: ['tickets', params],
     queryFn: () => ticketsApi.listTickets(params),
