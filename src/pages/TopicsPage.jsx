@@ -228,12 +228,12 @@ export default function TopicsPage() {
                       </span>
                     </td>
                     <td className='px-4 py-3 text-center'>
-                      {topic.total_open_count > 0 ? (
+                      {topic.total_open > 0 ? (
                         <button
                           onClick={() => handleTicketFilter(topic.full_name, 'open')}
                           className='inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400 hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors'
                         >
-                          {topic.total_open_count}
+                          {topic.total_open}
                         </button>
                       ) : (
                         <span className='inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-400 dark:bg-gray-800 dark:text-gray-500'>
