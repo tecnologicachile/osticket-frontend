@@ -7,7 +7,7 @@ import { PRIORITY_MAP } from '../../utils/constants.js'
 import { Filter, X, Search } from 'lucide-react'
 
 const STATUS_OPTIONS = [
-  { value: '', label: 'Todos' },
+  { value: 'all', label: 'Todos' },
   { value: 'open', label: 'Abierto' },
   { value: 'resolved', label: 'Resuelto' },
   { value: 'closed', label: 'Cerrado' },
@@ -117,7 +117,7 @@ export default function TicketFilters() {
             Estado
           </label>
           <select
-            value={get('status')}
+            value={get('status') || 'open'}
             onChange={(e) => setParam('status', e.target.value)}
             className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-700 dark:text-gray-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
@@ -235,7 +235,7 @@ export default function TicketFilters() {
               Cola
             </label>
             <select
-              value={get('queue') || 'open'}
+              value={get('queue') || 'my'}
               onChange={(e) => setParam('queue', e.target.value)}
               className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-700 dark:text-gray-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
