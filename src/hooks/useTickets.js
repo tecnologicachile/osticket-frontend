@@ -21,6 +21,7 @@ export function useTickets({
   return useQuery({
     queryKey: ['tickets', params],
     queryFn: () => ticketsApi.listTickets(params),
+    refetchInterval: 30_000,
   })
 }
 
@@ -31,6 +32,7 @@ export function useTicket(id) {
     queryFn: () => ticketsApi.getTicket(numId),
     enabled: !!numId,
     select: (data) => data?.data || null,
+    refetchInterval: 30_000,
   })
 }
 
