@@ -10,7 +10,7 @@ const navItems = [
 ]
 
 export default function Sidebar({ mobileOpen, onMobileClose }) {
-  const [topicsOpen, setTopicsOpen] = useState(false)
+  const [topicsOpen, setTopicsOpen] = useState(true)
   const { data: topics = [] } = useTopics()
 
   const activeTopics = useMemo(() => {
