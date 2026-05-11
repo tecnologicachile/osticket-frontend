@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin "@tailwindcss/typography";
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 /* ── Base ── */
@@ -153,4 +155,70 @@ video,
     height: auto;
   }
 }
+
+/* ── Thread body — match osTicket native rendering ── */
+.thread-body {
+  color: #111827;
+  word-wrap: break-word;
+}
+.dark .thread-body { color: #f3f4f6; }
+.thread-body p { margin-bottom: 0.75em; }
+.thread-body a { color: #1d4ed8; text-decoration: underline; }
+.thread-body ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 0.75em; }
+.thread-body ol { list-style-type: decimal; padding-left: 1.5rem; margin-bottom: 0.75em; }
+.thread-body li { margin-bottom: 0.25em; }
+.thread-body blockquote {
+  border-left: 3px solid #d1d5db;
+  padding-left: 1rem;
+  margin-left: 0;
+  font-style: italic;
+  color: #374151;
+}
+.dark .thread-body blockquote { border-left-color: #4b5563; color: #9ca3af; }
+.thread-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+}
+.thread-body th,
+.thread-body td {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+.dark .thread-body th,
+.dark .thread-body td { border-color: #4b5563; }
+.thread-body th {
+  background: #f3f4f6;
+  font-weight: 600;
+}
+.dark .thread-body th { background: #374151; }
+.thread-body strong { font-weight: 600; color: #111827; }
+.dark .thread-body strong { color: #f3f4f6; }
+.thread-body pre {
+  background: #1f2937;
+  color: #f8f8f2;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+.thread-body code {
+  background: #f3f4f6;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+.dark .thread-body code { background: #374151; }
+.thread-body img { max-width: 100%; height: auto; }
+.thread-body h1, .thread-body h2, .thread-body h3,
+.thread-body h4, .thread-body h5, .thread-body h6 {
+  font-weight: 600;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+}
+.thread-body h1 { font-size: 1.25rem; }
+.thread-body h2 { font-size: 1.125rem; }
+.thread-body h3 { font-size: 1.0625rem; }
 

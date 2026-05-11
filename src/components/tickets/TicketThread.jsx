@@ -53,7 +53,7 @@ function ThreadEntry({ entry }) {
         </div>
       )}
       <div
-        className="prose prose-sm max-w-none dark:prose-invert [--tw-prose-body:#111827] dark:[--tw-prose-body:#f3f4f6]"
+        className="thread-body text-sm text-gray-900 dark:text-gray-100 leading-relaxed space-y-3"
         dangerouslySetInnerHTML={{ __html: entry.body }}
       />
       {entry.attachments?.length > 0 && (
