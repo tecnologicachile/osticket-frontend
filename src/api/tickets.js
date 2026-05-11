@@ -141,6 +141,13 @@ export function bulkTransfer(ticketIds, departmentId) {
   })
 }
 
+export function bulkTopic(ticketIds, topicId) {
+  return apiRequest('/tickets/bulk/topic', {
+    method: 'POST',
+    body: JSON.stringify({ ticket_ids: ticketIds, topic_id: topicId }),
+  })
+}
+
 export function bulkMerge(targetId, sourceIds) {
   return apiRequest(`/tickets/${targetId}/merge`, {
     method: 'POST',

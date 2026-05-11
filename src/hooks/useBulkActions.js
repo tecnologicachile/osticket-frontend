@@ -71,6 +71,16 @@ export function useBulkActions() {
     onError: (err) => toast.error(`Error: ${err.message}`),
   })
 
+  const bulkTopicMutation = useMutation({
+    mutationFn: ({ ids, topicId }) => ticketsApi.bulkTopic(ids, topicId),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['tickets'] })
+      toast.success('Tema asignado correctamente')
+      clearSelection()
+    },
+    onError: (err) => toast.error(`Error: ${err.message}`),
+  })
+
   return {
     selectedIds,
     toggleSelect,
@@ -81,5 +91,6 @@ export function useBulkActions() {
     bulkDelete: (options) => bulkDeleteMutation.mutate({ ids: selectedIds }, options),
     bulkTransfer: (departmentId, options) => bulkTransferMutation.mutate({ ids: selectedIds, departmentId }, options),
     bulkMerge: (targetId, options) => bulkMergeMutation.mutate({ targetId, sourceIds: selectedIds }, options),
+    bulkTopic: (topicId, options) => bulkTopicMutation.mutate({ ids: selectedIds, topicId }, options),
   }
 }

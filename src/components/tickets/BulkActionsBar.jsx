@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useAgents } from '../../hooks/useAgents.js'
 import { useDepartments } from '../../hooks/useDepartments.js'
+import { useTopics } from '../../hooks/useTopics.js'
 import { STATUS_MAP } from '../../utils/constants.js'
 import {
   X,
@@ -9,6 +10,7 @@ import {
   Trash2,
   ArrowRightLeft,
   GitMerge,
+  FolderTree,
 } from 'lucide-react'
 import toast from 'react-hot-toast'
 
@@ -120,14 +122,17 @@ export default function BulkActionsBar({ actions }) {
     bulkDelete,
     bulkTransfer,
     bulkMerge,
+    bulkTopic,
   } = actions
   const { data: agents = [] } = useAgents()
   const { data: departments = [] } = useDepartments()
+  const { data: topics = [] } = useTopics()
 
   const [modal, setModal] = useState(null)
   const [selectedStatus, setSelectedStatus] = useState('')
   const [selectedAgent, setSelectedAgent] = useState('')
   const [selectedDept, setSelectedDept] = useState('')
+  const [selectedTopic, setSelectedTopic] = useState('')
   const [mergeTargetId, setMergeTargetId] = useState('')
 
   const resetAndClose = () => {
@@ -135,6 +140,7 @@ export default function BulkActionsBar({ actions }) {
     setSelectedStatus('')
     setSelectedAgent('')
     setSelectedDept('')
+    setSelectedTopic('')
     setMergeTargetId('')
   }
 
@@ -186,6 +192,20 @@ export default function BulkActionsBar({ actions }) {
       toast.error('Transferencia masiva no disponible aún')
       resetAndClose()
     }
+  }
+
+  const handleTopicConfirm = () => {
+    if (!selectedTopic) return
+    bulkTopic(selectedTopic, {
+      onSuccess: (data) => {
+        const ok = data?.succeeded ?? data?.ok ?? selectedIds.length
+        const fail = data?.failed ?? 0
+        toast.success(fail > 0 ? `${ok} ok, ${fail} errores` : `Tema asignado a ${ok} tickets`)
+        clearSelection()
+        resetAndClose()
+      },
+      onError: (err) => toast.error(`Error: ${err.message}`),
+    })
   }
 
   const handleDeleteConfirm = () => {
@@ -262,6 +282,14 @@ export default function BulkActionsBar({ actions }) {
               icon={ArrowRightLeft}
               label="Transferir"
               variant="emerald"
+            />
+
+            {/* Tema */}
+            <ActionButton
+              onClick={() => { setSelectedTopic(''); setModal('topic') }}
+              icon={FolderTree}
+              label="Tema"
+              variant="slate"
             />
 
             {/* Merge (only if 2+) */}
@@ -367,6 +395,33 @@ export default function BulkActionsBar({ actions }) {
           {departments.map((d) => (
             <option key={d.id} value={d.id}>
               {d.name}
+            </option>
+          ))}
+        </select>
+      </ConfirmModal>
+
+      {/* Topic Modal */}
+      <ConfirmModal
+        open={modal === 'topic'}
+        onClose={resetAndClose}
+        title="Asignar tema"
+        onConfirm={handleTopicConfirm}
+        confirmLabel="Asignar tema"
+        confirmVariant="indigo"
+        disabled={!selectedTopic}
+      >
+        <p className="mb-3">
+          Asignar tema a <strong>{count}</strong> {count === 1 ? 'ticket' : 'tickets'}:
+        </p>
+        <select
+          value={selectedTopic}
+          onChange={(e) => setSelectedTopic(e.target.value)}
+          className="w-full rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-sm text-slate-700 dark:text-slate-200 px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+        >
+          <option value="">Seleccionar tema…</option>
+          {topics.map((t) => (
+            <option key={t.id} value={t.id}>
+              {t.full_name || t.name}
             </option>
           ))}
         </select>
