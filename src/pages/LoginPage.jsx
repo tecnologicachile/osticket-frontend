@@ -14,7 +14,7 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/tickets?queue=my', { replace: true })
+      navigate('/tickets', { replace: true })
     }
   }, [isAuthenticated, navigate])
 
@@ -32,7 +32,7 @@ export default function LoginPage() {
       const result = await loginRequest(username.trim(), password)
       const agent = result.data
       login(agent.api_key, agent.name, String(agent.staff_id))
-      navigate('/tickets?queue=my', { replace: true })
+      navigate('/tickets', { replace: true })
     } catch (err) {
       setError(err.message || 'Credenciales inválidas')
     } finally {

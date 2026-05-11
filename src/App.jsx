@@ -31,7 +31,7 @@ export default function App() {
         <Route path="/stats" element={<StatsPage />} />
         <Route path="/topics" element={<TopicsPage />} />
       </Route>
-      <Route path="*" element={<Navigate to="/tickets?queue=my" replace />} />
+      <Route path="*" element={<Navigate to="/tickets" replace />} />
     </Routes>
   )
 }

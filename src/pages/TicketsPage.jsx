@@ -42,10 +42,9 @@ export default function TicketsPage() {
   // Read filters from URL
   const page = Number(searchParams.get('page') || 1)
   const q = searchParams.get('q') || undefined
-  const queue = searchParams.get('queue') || (q ? 'open' : 'my')
   const status = searchParams.get('status') || (q ? 'all' : undefined)
   const dept_id = searchParams.get('dept_id') || undefined
-  const agent_id = searchParams.get('agent_id') || (queue === 'my' && !q ? staffId : undefined)
+  const agent_id = searchParams.get('agent_id') || undefined
   const priority = searchParams.get('priority') || undefined
   const date_from = searchParams.get('date_from') || undefined
   const date_to = searchParams.get('date_to') || undefined
@@ -55,7 +54,6 @@ export default function TicketsPage() {
   const sort_dir = searchParams.get('sort_dir') || 'DESC'
 
   const { data, isLoading, isError, error } = useTickets({
-    queue,
     page,
     limit: 25,
     status,

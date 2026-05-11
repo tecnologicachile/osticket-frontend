@@ -58,12 +58,7 @@ export default function TicketFilters() {
   }, [searchQuery, setParam])
 
   const clearFilters = useCallback(() => {
-    setSearchParams((prev) => {
-      const next = new URLSearchParams()
-      const q = prev.get('queue')
-      if (q) next.set('queue', q)
-      return next
-    })
+    setSearchParams(new URLSearchParams())
   }, [setSearchParams])
 
   const hasFilters = get('status') || get('dept_id') || get('agent_id') || get('priority') || get('date_from') || get('date_to') || get('overdue') || get('topic_name') || get('q')
@@ -228,34 +223,18 @@ export default function TicketFilters() {
           />
         </div>
 
-        {/* Overdue + Queue selector */}
-        <div className="flex items-end gap-3">
-          <div>
-            <label className="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">
-              Cola
-            </label>
-            <select
-              value={get('queue') || 'my'}
-              onChange={(e) => setParam('queue', e.target.value)}
-              className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm text-gray-700 dark:text-gray-200 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            >
-              <option value="open">Abiertos</option>
-              <option value="my">Mis tickets</option>
-              <option value="closed">Cerrados</option>
-            </select>
-          </div>
-          <label className="flex items-center gap-2 pb-2 cursor-pointer select-none">
-            <input
-              type="checkbox"
-              checked={get('overdue') === '1'}
-              onChange={(e) => setParam('overdue', e.target.checked ? '1' : '')}
-              className="rounded border-gray-300 dark:border-gray-600 text-red-500 focus:ring-red-500"
-            />
-            <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
-              Solo vencidos
-            </span>
-          </label>
-        </div>
+        {/* Overdue */}
+        <label className="flex items-center gap-2 cursor-pointer select-none">
+          <input
+            type="checkbox"
+            checked={get('overdue') === '1'}
+            onChange={(e) => setParam('overdue', e.target.checked ? '1' : '')}
+            className="rounded border-gray-300 dark:border-gray-600 text-red-500 focus:ring-red-500"
+          />
+          <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
+            Solo vencidos
+          </span>
+        </label>
       </div>
     </div>
   )
